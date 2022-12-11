@@ -1,0 +1,108 @@
+[
+	{
+		"name": "SanDisk Ultra 128GB SDXC UHS-I Memory Card up to 80MB/s",
+		"price": "45.89",
+		"description": "Ultra-fast cards (2) to take better pictures and Full HD videos (1) with your compact to mid-range point-and-shoot cameras and camcorders. With SanDisk Ultra SDXC UHS-I cards you’ll benefit from faster downloads, high capacity, and better performance to capture and store 128GB (5) of high quality pictures and Full HD video (1). Take advantage of ultra-fast read speeds of up to 80MB/s (3) to save time moving photos and videos from the card to your computer. From a leader in flash memory storage, SanDisk Ultra SDXC UHS-I cards are compatible with SDHC and SDXC digital devices, and come with a 10-year limited warranty (6).",
+		"ratings": 4.5,
+		"images": [
+			{
+				"public_id": "products/sandisk_som9tr",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701313/products/sandisk_som9tr.jpg"
+			}
+		],
+		"category": "Podzespoły komputerowe",
+		"seller": "Ebay",
+		"stock": 50,
+		"numOfReviews": 32,
+		"reviews": []
+	},
+	{
+		"name": "CAN USB FD Adapter (GC-CAN-USB-FD)",
+		"price": "315.00",
+		"description": "Monitor a CAN network, write a CAN program and communicate with industrial, medical, automotive or other CAN based device. Connect CAN FD and CAN networks to a computer via USB with the CAN USB FD adapter.",
+		"ratings": 1.65,
+		"images": [
+			{
+				"public_id": "products/pcan-usb-fd_dgghf3",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701323/products/pcan-usb-fd_dgghf3.jpg"
+			}
+		],
+		"category": "Laptopy",
+		"seller": "Amazon",
+		"stock": 10,
+		"numOfReviews": 2,
+		"reviews": []
+	},
+	{
+		"name": "CHARMOUNT Full Motion TV Wall Mount Swivel",
+		"price": "26.99 ",
+		"description": "CHARMOUNT TV MOUNT UNIVERSAL DESIGN - Has your TV been received? Tilted TV wall mount is for 26 - 55 TVs weight up to 88lbs 40 kg. Our tilt TV mount has a compatible faceplate that fits VESA 75X75mm (3x3). CHARMOUNT TV MOUNT UNIVERSAL DESIGN - Has your TV been received? Tilted TV wall mount is for 26 - 55 TVs weight up to 88lbs 40 kg. Our tilt TV mount has a compatible faceplate that fits VESA 75X75mm (3x3) CHARMOUNT TV MOUNT UNIVERSAL DESIGN - Has your TV been received? Tilted TV wall mount is for 26 - 55 TVs weight up to 88lbs 40 kg. Our tilt TV mount has a compatible faceplate that fits VESA 75X75mm (3x3).",
+		"ratings": 3.5,
+		"images": [
+			{
+				"public_id": "products/51-2JPUG4sL._AC_SX355__edrftk",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701324/products/51-2JPUG4sL._AC_SX355__edrftk.jpg"
+			}
+		],
+		"category": "Komputery",
+		"seller": "Amazon",
+		"stock": 1,
+		"numOfReviews": 12,
+		"reviews": []
+	},
+	{
+		"name": "XIAOMI Redmi Note 10 Pro",
+		"price": "1099",
+		"description": "Poznaj smartfon Redmi Note 10 Pro i jego wydajne podzespoły, oglądaj filmy na wysokiej jakości ekranie AMOLED i rób zdjęcia jednym z pięciu dostępnych aparatów. W międzyczasie przekonasz się też o długim czasie działania baterii, która z kolei czas ładowania ma wyjątkowo krótki. Do tego kilka przydatnych dodatków jak czytnik linii papilarnych, gniazdo słuchawkowe 3,5 mm, NFC czy nadajnik IR.",
+		"ratings": 3.5,
+		"images": [
+			{
+				"public_id": "products/xiaomi1_sfygmr",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701799/products/xiaomi1_sfygmr.jpg"
+			},
+			{
+				"public_id": "products/xiaomi2_gd5e1y",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701799/products/xiaomi2_gd5e1y.jpg"
+			}
+		],
+		"category": "Telefony",
+		"seller": "Xiaomi",
+		"stock": 1,
+		"numOfReviews": 12,
+		"reviews": []
+	},
+	{
+		"name": "Apple AirPods with Charging Case (Wired)",
+		"price": "126.99 ",
+		"description": "AirPods with Charging Case: More than 24 hours listening time, up to 18 hours talk time; AirPods (single charge): Up to 5 hours listening time, up to 3 hours talk time or 15 minutes in the case equals up to 3 hours listening time or up to 2 hours talk time.",
+		"ratings": 4.8,
+		"images": [
+			{
+				"public_id": "products/airpods_ytvjmt",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670790991/products/airpods_ytvjmt.jpg"
+			}
+		],
+		"category": "Akcesoria",
+		"seller": "Amazon",
+		"stock": 122,
+		"numOfReviews": 2671,
+		"reviews": []
+	},
+	{
+		"name": "Apple MacBook Air (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray ",
+		"price": "949.99",
+		"description": "Stunning 13.3-inch Retina display with True Tone technology, Backlit Magic Keyboard and Touch ID, Tenth-generation, Intel Core i3 processor, Intel Iris Plus Graphics, Fast SSD storage, 8GB of memory, Stereo speakers with wider stereo sound",
+		"ratings": 4.9,
+		"images": [
+			{
+				"public_id": "products/macbook_oe4wdc",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670790853/products/macbook_oe4wdc.jpg"
+			}
+		],
+		"category": "Laptopy",
+		"seller": "Amazon",
+		"stock": 0,
+		"numOfReviews": 56,
+		"reviews": []
+	}
+]
