@@ -1,5 +1,6 @@
-const mongosee = require("mongoose")
+const mongoose = require("mongoose")
 const validator = require("validator")
+const bcrypt = require("bcryptjs")
 
 const userSchema = new mongoose.Schema({
 	name: {
@@ -16,7 +17,7 @@ const userSchema = new mongoose.Schema({
 	password: {
 		type: String,
 		required: true,
-		minLength: [8, "Hasło musi być dłuższe niż 8 znaków."],
+		minlength: [8, "Hasło musi być dłuższe niż 8 znaków."],
 		select: false,
 	},
 	avatar: {
@@ -39,6 +40,15 @@ const userSchema = new mongoose.Schema({
 	},
 	ressetPasswordToken: String,
 	resetPasswordExpire: Date,
+})
+
+//Szyfrowanie hasła przed zapisaniem użytkownika
+userSchema.pre("save", async function (next) {
+	if (!this.isModified("password")) {
+		next()
+	}
+
+	this.password = await bcrypt.hash(this.password, 10)
 })
 
 module.exports = mongoose.model("User", userSchema)
