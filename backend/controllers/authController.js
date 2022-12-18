@@ -53,6 +53,29 @@ exports.loginUser = catchAsyncErrors(async (req, res, next) => {
 	sendToken(user, 200, res)
 })
 
+// Zapomniane hasło => /api/v1/password/forgot
+exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
+	const user = await User.findOne({ email: req.body.email })
+
+	if (!user) {
+		return next(
+			new ErrorHandler("Nie znaleziono użytkownika z takim emailem.", 404)
+		)
+	}
+
+	// Token resetu
+	const resetToken = user.getResetPasswordToken()
+
+	await user.save({ validateBeforeSave: false })
+
+	// Stwórz url resetowanego hasła
+	const resetUrl = `${req.protocol}://${req.get(
+		"host"
+	)}/api/v1/password/reset/${resetToken}`
+
+	const message = `Twój token resetu hasła jest następujący:\n\n${resetUrl}\n\nJeśli nie prosiłeś/aś o ten e-mail, zignoruj go`
+})
+
 // Wylogowywanie użytkownika => /api/v1/logout
 exports.logout = catchAsyncErrors(async (req, res, next) => {
 	res.cookie("token", null, {
