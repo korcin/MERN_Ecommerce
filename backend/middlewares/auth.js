@@ -18,3 +18,18 @@ exports.isAuthenticatedUser = catchAsyncErrors(async (req, res, next) => {
 
 	next()
 })
+
+// Sprawdzanie roli użytkowników
+exports.authorizeRoles = (...roles) => {
+	return (req, res, next) => {
+		if (!roles.includes(req.user.role)) {
+			return next(
+				new ErrorHandler(
+					`(${req.user.role}) nie ma pozwolenia do wykonywania tej czynności.`,
+					403
+				)
+			)
+		}
+		next()
+	}
+}
