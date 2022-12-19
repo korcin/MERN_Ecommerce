@@ -2,6 +2,8 @@ const User = require("../models/user")
 const ErrorHandler = require("../utils/errorHandler")
 const catchAsyncErrors = require("../middlewares/catchAsyncErrors")
 const sendToken = require("../utils/jwtToken")
+const sendEmail = require("../utils/sendEmail")
+const crypto = require("crypto")
 
 //Rejestracja użytkownika => /api/v1/register
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
@@ -74,6 +76,56 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
 	)}/api/v1/password/reset/${resetToken}`
 
 	const message = `Twój token resetu hasła jest następujący:\n\n${resetUrl}\n\nJeśli nie prosiłeś/aś o ten e-mail, zignoruj go`
+
+	try {
+		await sendEmail({
+			email: user.email,
+			subject: "Odzyskiwanie hasła",
+			message,
+		})
+
+		res.status(200).json({
+			success: true,
+			message: `Wysłano email do: ${user.email}`,
+		})
+	} catch (error) {
+		user.resetPasswordToken = undefined
+		user.resetPasswordExpire = undefined
+
+		await user.save({ validateBeforeSave: false })
+
+		return next(new ErrorHandler(error.message, 500))
+	}
+})
+
+// Resetowanie hasła => /api/v1/password/reset/:token
+exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
+	const resetPasswordToken = crypto
+		.createHash("sha256")
+		.update(req.params.token)
+		.digest("hex")
+
+	const user = await User.findOne({
+		resetPasswordToken,
+		resetPasswordExpire: { $gt: Date.now() },
+	})
+
+	if (!user) {
+		return next(new ErrorHandler("Token odzyskiwania hasła jest nieprawidłowy albo wygasł.", 400))
+	}
+
+	if (req.body.password !== req.body.confirmPassword) {
+		return next(new ErrorHandler("Hasło nie pasuje.", 400))
+	}
+
+	// Ustawianie nowego hasła
+	user.password = req.body.password
+
+	user.resetPasswordToken = undefined
+	user.resetPasswordExpire = undefined
+
+	await user.save()
+	sendToken(user, 200, res)
 })
 
 // Wylogowywanie użytkownika => /api/v1/logout
