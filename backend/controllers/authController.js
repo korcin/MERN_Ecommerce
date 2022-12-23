@@ -190,3 +190,30 @@ exports.logout = catchAsyncErrors(async (req, res, next) => {
 		message: "Pomyślnie wylogowano.",
 	})
 })
+
+// ADMIN
+
+// Wyświetl wszystkich użytkowników
+exports.allUsers = catchAsyncErrors(async (req, res, next) => {
+	const users = await User.find()
+
+	res.status(200).json({
+		success: true,
+		users,
+	})
+})
+
+// Get user details => /api/v1/admin/user/:id
+exports.getUserDetails = catchAsyncErrors(async (req, res, next) => {
+	const user = await User.findById(req.params.id)
+
+	if (!user) {
+		return next(
+			new ErrorHandler(`Nie znaleziono takiego uzytkownika ${req.params.id}.`)
+		)
+	}
+	res.status(200).json({
+		success: true,
+		user
+	})
+})
