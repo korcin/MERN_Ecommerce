@@ -4,6 +4,7 @@ const catchAsyncErrors = require("../middlewares/catchAsyncErrors")
 const sendToken = require("../utils/jwtToken")
 const sendEmail = require("../utils/sendEmail")
 const crypto = require("crypto")
+const { send } = require("process")
 
 //Rejestracja użytkownika => /api/v1/register
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
@@ -111,7 +112,12 @@ exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
 	})
 
 	if (!user) {
-		return next(new ErrorHandler("Token odzyskiwania hasła jest nieprawidłowy albo wygasł.", 400))
+		return next(
+			new ErrorHandler(
+				"Token odzyskiwania hasła jest nieprawidłowy albo wygasł.",
+				400
+			)
+		)
 	}
 
 	if (req.body.password !== req.body.confirmPassword) {
@@ -125,6 +131,32 @@ exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
 	user.resetPasswordExpire = undefined
 
 	await user.save()
+	sendToken(user, 200, res)
+})
+
+// Wyświetl dane aktualnie zalogowanego użytkownika => /api/v1/me
+exports.getUserProfile = catchAsyncErrors(async (req, res, next) => {
+	const user = await User.findById(req.user.id)
+
+	res.status(200).json({
+		success: true,
+		user,
+	})
+})
+
+// Aktualizowanie / Zmiana hasła => /api/v1/password/update
+exports.updatePassword = catchAsyncErrors(async (req, res, next) => {
+	const user = await User.findById(req.user.id).select("+password")
+
+	// Sprawdź poprzednie hasło użytkownika
+	const isMatched = await user.comparePassword(req.body.oldPassword)
+	if (!isMatched) {
+		return next(new ErrorHandler("Stare hasło jest niepoprawne.", 400))
+	}
+
+	user.password = req.body.password
+	await user.save()
+
 	sendToken(user, 200, res)
 })
 
