@@ -1,7 +1,8 @@
 const Order = require("../models/order")
-const Procudt = require("../models/product")
+const Product = require("../models/product")
 const ErrorHandler = require("../utils/errorHandler")
 const catchAsyncErrors = require("../middlewares/catchAsyncErrors")
+const product = require("../models/product")
 
 // Stwórz nowe zamówienie => /api/v1/order/new
 exports.newOrder = catchAsyncErrors(async (req, res, next) => {
@@ -60,7 +61,7 @@ exports.myOrders = catchAsyncErrors(async (req, res, next) => {
 	})
 })
 
-// Znajdź wszystkie zamówienia => /api/v1/admin/orders
+// Znajdź wszystkie zamówienia - admin => /api/v1/admin/orders
 exports.allOrders = catchAsyncErrors(async (req, res, next) => {
 	const orders = await Order.find()
 
@@ -75,3 +76,31 @@ exports.allOrders = catchAsyncErrors(async (req, res, next) => {
 		orders,
 	})
 })
+
+// Zaktualizuj zamówienie - admin => /api/v1/admin/order/:id
+exports.updateOrder = catchAsyncErrors(async (req, res, next) => {
+	const order = await Order.findById(req.params.id)
+
+	if (order.orderStatus === "Dostarczono") {
+		return next(new ErrorHandler("To zamówienie zostało już dostarczone.", 400))
+	}
+
+	order.orderItems.forEach(async item => {
+		await updateStock(item.product, item.quantity)
+	})
+	;(order.orderStatus = req.body.status), (order.deliveredAt = Date.now())
+
+	await order.save()
+
+	res.status(200).json({
+		success: true,
+	})
+})
+
+async function updateStock(id, quantity) {
+	const product = await Product.findById(id)
+
+	product.stock = product.stock - quantity
+
+	await product.save({ validateBeforeSave: false })
+}
