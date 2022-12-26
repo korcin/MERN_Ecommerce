@@ -24,7 +24,7 @@ const server = app.listen(process.env.PORT, () => {
 
 //Obsługa odrzuceń połączenia
 process.on("unhandledRejection", err => {
-	console.log(`ERROR: ${err.message}`)
+	console.log(`ERROR: ${err.stack}`)
 	console.log("Wyłączenie serwera z powodu odrzucenia połaczenia.")
 	server.close(() => {
 		process.exit(1)

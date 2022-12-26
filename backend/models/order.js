@@ -26,7 +26,7 @@ const orderSchema = mongoose.Schema({
 	user: {
 		type: mongoose.Schema.Types.ObjectId,
 		require: true,
-		ref: "User",
+		ref: "Użytkownik",
 	},
 	orderItems: [
 		{
@@ -87,7 +87,7 @@ const orderSchema = mongoose.Schema({
 	orderStatus: {
 		type: String,
 		require: true,
-		default: "Processing",
+		default: "Przetwarzane",
 	},
 	deliveredAt: {
 		type: Date,

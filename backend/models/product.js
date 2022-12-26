@@ -51,12 +51,12 @@ const productSchema = new mongoose.Schema({
 	},
 	seller: {
 		type: String,
-		required: [true, "Prosze podać sprzedawcę"],
+		required: [true, "Prosze podać sprzedawcę."],
 	},
 	stock: {
 		type: Number,
-		required: [true, "Proszę podać ilość dostępnego produku"],
-		maxLength: [5, "Cena nie może przekraczać 5 znaków"],
+		required: [true, "Proszę podać ilość dostępnego produku."],
+		maxLength: [5, "Cena nie może przekraczać 5 znaków."],
 		default: 0,
 	},
 	numOfReviews: {
@@ -81,8 +81,8 @@ const productSchema = new mongoose.Schema({
 	],
 	user: {
 		type: mongoose.Schema.ObjectId,
-		ref: "user",
-		require: true
+		ref: "Użytkownik",
+		require: true,
 	},
 	createdAt: {
 		type: Date,
