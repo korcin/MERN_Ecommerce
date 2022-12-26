@@ -25,7 +25,7 @@ exports.authorizeRoles = (...roles) => {
 		if (!roles.includes(req.user.role)) {
 			return next(
 				new ErrorHandler(
-					`(${req.user.role}) nie ma pozwolenia do wykonywania tej czynności.`,
+					`${req.user.role} nie ma pozwolenia do wykonywania tej czynności.`,
 					403
 				)
 			)
