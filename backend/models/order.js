@@ -87,7 +87,7 @@ const orderSchema = mongoose.Schema({
 	orderStatus: {
 		type: String,
 		require: true,
-		default: "Przetwarzane",
+		default: "W realizacji",
 	},
 	deliveredAt: {
 		type: Date,
