@@ -1,6 +1,5 @@
 html,
 body {
-	font-family: "Amazon Ember";
 	width: 100%;
 	height: 100%;
 	margin: 0px;
@@ -68,7 +67,7 @@ nav {
 
 /* Home page */
 #products_heading {
-	margin-top: 1.8rem;
+	margin: 1.8rem;
 }
 
 .card {
@@ -77,6 +76,7 @@ nav {
 
 .card-title a {
 	color: #2e2e2e;
+	text-decoration: none;
 }
 
 .card-title a:hover {
