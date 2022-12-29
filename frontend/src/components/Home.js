@@ -24,11 +24,11 @@ const Home = () => {
 									<div className='rating-outer'>
 										<div className='rating-inner'></div>
 									</div>
-									<span id='no_of_reviews'>(5 Reviews)</span>
+									<span id='no_of_reviews'>(5 Opinii)</span>
 								</div>
-								<p className='card-text'>$45.67</p>
+								<p className='card-text'>45.67 zł</p>
 								<a href='#' id='view_btn' className='btn btn-block'>
-									View Details
+									Zobacz szczegóły
 								</a>
 							</div>
 						</div>

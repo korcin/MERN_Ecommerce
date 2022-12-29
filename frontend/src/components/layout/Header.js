@@ -10,7 +10,7 @@ const Header = () => {
 					</div>
 				</div>
 
-				<div className='col-12 col-md-6 mt-2 mt-md-0 '>
+				<div className='col-12 col-md-6 mt-2 mt-md-0 ms-4 ms-md-0 input'>
 					<div className='input-group'>
 						<input
 							type='text'
