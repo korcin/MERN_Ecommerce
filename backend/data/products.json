@@ -57,12 +57,12 @@
 		"ratings": 3.5,
 		"images": [
 			{
-				"public_id": "products/xiaomi1_sfygmr",
-				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701799/products/xiaomi1_sfygmr.jpg"
-			},
-			{
 				"public_id": "products/xiaomi2_gd5e1y",
 				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701799/products/xiaomi2_gd5e1y.jpg"
+			},
+			{
+				"public_id": "products/xiaomi1_sfygmr",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701799/products/xiaomi1_sfygmr.jpg"
 			}
 		],
 		"category": "Telefony",
