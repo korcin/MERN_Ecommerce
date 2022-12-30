@@ -47,7 +47,7 @@ nav {
 #login_btn,
 #view_btn {
 	background-color: #febd69;
-	padding: 0.4rem .9rem;
+	padding: 0.4rem 0.9rem;
 	font-family: calibri;
 }
 
@@ -95,11 +95,6 @@ nav {
 #view_btn {
 	background-color: #fa9c23;
 	color: white;
-}
-
-.card-img-top {
-	width: 200px;
-	height: 150px;
 }
 
 .ratings {
@@ -615,3 +610,16 @@ ul.CTAs a {
 	color: grey;
 }
 
+@media (min-width: 992px) {
+	.card-img-top {
+		width: 150px;
+		height: 100px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.card-img-top {
+		width: 200px;
+		height: 150px;
+	}
+}
