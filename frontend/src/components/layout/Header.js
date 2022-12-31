@@ -1,4 +1,6 @@
 import React, { Fragment } from "react"
+import Search from "./Search"
+import "../../App.css"
 
 const Header = () => {
 	return (
@@ -6,24 +8,12 @@ const Header = () => {
 			<nav className='navbar row'>
 				<div className='col-12 col-md-3'>
 					<div className='navbar-brand'>
-						<img src='./images/shop.png' alt='' />
+						<h3 className='text-white ms-3'>Sklep E-Commerce</h3>
 					</div>
 				</div>
 
 				<div className='col-12 col-md-6 mt-2 mt-md-0 ms-4 ms-md-0 input'>
-					<div className='input-group'>
-						<input
-							type='text'
-							id='search_field'
-							className='form-control'
-							placeholder='Podaj nazwę produktu...'
-						/>
-						<div className='input-group-append'>
-							<button id='search_btn' className='btn'>
-								<i className='fa fa-search' aria-hidden='true'></i>
-							</button>
-						</div>
-					</div>
+					<Search />
 				</div>
 
 				<div className='col-12 col-md-3 mt-4 mt-md-0 text-center'>
