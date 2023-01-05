@@ -59,10 +59,6 @@
 			{
 				"public_id": "products/xiaomi2_gd5e1y",
 				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701799/products/xiaomi2_gd5e1y.jpg"
-			},
-			{
-				"public_id": "products/xiaomi1_sfygmr",
-				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701799/products/xiaomi1_sfygmr.jpg"
 			}
 		],
 		"category": "Telefony",
@@ -123,20 +119,62 @@
 		"reviews": []
 	},
 	{
-		"name": "Nikon D3500 W/ AF-P DX NIKKOR 18-55mm f/3.5-5.6G VR Black ",
-		"price": "496.95",
-		"description": "You don't need to be a photographer to know a great photo when you see one. And you don't need to be a photographer to take a great photo—you just need the D3500. It's as easy to use as a point-and-shoot, but it takes beautiful DSLR photos and videos that get noticed. It feels outstanding in your hands, sturdy and balanced with controls where you want them. It's compact, durable and versatile, ideal for travel. And it works seamlessly with compatible smartphones, making it easier than ever to share your great photos. Even if you've never picked up a DSLR camera, you can take beautiful pictures with D3500.",
+		"name": "Nikon D3500 korpus + obiektyw",
+		"price": "4249.99",
+		"description": "Radość z prawdziwej fotografii w chwilach wyjątkowych i na co dzień. Kompaktowa lustrzanka D3500 łączy wysoką jakość wykonania z doskonałymi parametrami. Bezproblemowa obsługa spektakularnie ułatwia rejestrowanie na zdjęciach ważnych chwil i dzielenie się nimi. Zastosowana w lustrzance D3500 matryca formatu DX o dużej rozdzielczości 24,2 mln pikseli rejestruje pełne szczegółów zdjęcia i filmy Full HD, nawet przy słabym oświetleniu. Dodanie do tego charakterystyk optycznych obiektywu NIKKOR daje zestaw, który pozwala tworzyć artystyczne portrety z rozmytym tłem. Z łatwością. Uchwyć wszystko. Od magii północy po kolory nowego dnia.  Zakres czułości ISO 100–25600 sprawia, że zdjęcia i filmy błyszczą w każdym świetle.",
 		"ratings": 4.7,
 		"images": [
 			{
-				"public_id": "products/camera_ridc0i",
-				"url": "https://res.cloudinary.com/bookit/image/upload/v1606231283/products/camera_ridc0i.jpg"
+				"public_id": "products/nikon_yplcuh",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672917907/products/nikon_yplcuh.jpg"
+			},
+			{
+				"public_id": "products/nikon1_s0oazi",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672917907/products/nikon1_s0oazi.jpg"
 			}
 		],
 		"category": "Aparaty",
 		"seller": "Amazon",
 		"stock": 131,
 		"numOfReviews": 222,
+		"reviews": []
+	},
+	{
+		"name": "AMD Ryzen 5 5600X",
+		"price": "849.00",
+		"description": "Jednostka AMD Ryzen 5 5600X posiada 6 rdzeni i 12 wątków, gotowych do pracy przy maksymalnym obciążeniu w grach i specjalistycznych aplikacjach. Pamięć cache tego procesora liczy łącznie 35 MB, a bazowe taktowanie rdzeni otwiera częstotliwość 3,70 GHz, mogąca sięgać aż do 4,60 GHz w trybie Turbo. Moc jednostki może jednak wzrosnąć dzięki odblokowanej możliwości podkręcania. Czas na ogromną moc wspartą przez nowatorską architekturę Zen 3.",
+		"ratings": 4.75,
+		"images": [
+			{
+				"public_id": "products/ryzen_fjegwd",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672600319/products/ryzen_fjegwd.webp"
+			}
+		],
+		"category": "Podzespoły komputerowe",
+		"seller": "AMD",
+		"stock": 10,
+		"numOfReviews": 222,
+		"reviews": []
+	},
+	{
+		"name": "Xiaomi 11T 8/128GB Celestial Blue",
+		"price": "1699.99",
+		"description": "Xiaomi 11T 128 GB Celestial Blue to świetny smartfon, który ma dla Ciebie wszystko, co najlepsze. Elegancki i profesjonalny design, duży przestronny ekran AMOLED ze 120 Hz odświeżaniem, szybki procesor i świetne aparaty. Jego starannie dobrane podzespoły dadzą Ci maksimum możliwości. Teraz zrealizujesz wszystkie swoje pasje, tak jak lubisz. A dzięki baterii o dużej pojemności możesz to robić przez cały dzień.",
+		"ratings": 4.75,
+		"images": [
+			{
+				"public_id": "products/pr_2021_10_5_8_13_53_192_06_wgpxuo",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672917371/products/pr_2021_10_5_8_13_53_192_06_wgpxuo.webp"
+			},
+			{
+				"public_id": "products/xiaomi11_d7zxtm",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672917452/products/xiaomi11_d7zxtm.webp"
+			}
+		],
+		"category": "Telefony",
+		"seller": "Xiaomi",
+		"stock": 10,
+		"numOfReviews": 23,
 		"reviews": []
 	}
 ]
