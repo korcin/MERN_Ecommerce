@@ -11,9 +11,12 @@ import { useAlert } from "react-alert"
 import { getProducts } from "../actions/productActions"
 import { useParams } from "react-router-dom"
 
+const { createSliderWithTooltip } = Slider
+const Range = createSliderWithTooltip(Slider.Range)
+
 const Home = () => {
 	const [currentPage, setCurrentPage] = useState(1)
-	const [price, setPrice] = useState([1, 1000])
+	const [price, setPrice] = useState([1, 5000])
 
 	const alert = useAlert()
 	const dispatch = useDispatch()
@@ -49,16 +52,15 @@ const Home = () => {
 								<Fragment>
 									<div className='col-6 col-md-3 mt-5 mb-5'>
 										<div className='px-5'>
-											<Slider
-												range
+											<Range
 												marks={{
-													1: `1 zł`,
-													1000: `1000 zł`,
+													1: `1zł`,
+													5000: `5000zł`,
 												}}
 												min={1}
-												max={1000}
-												defaultValue={[1, 1000]}
-												tipFormatter={value => `${value} zł`}
+												max={5000}
+												defaultValue={[1, 5000]}
+												tipFormatter={value => `${value}zł`}
 												tipProps={{
 													placement: "top",
 													visible: true,
@@ -77,6 +79,7 @@ const Home = () => {
 									</div>
 								</Fragment>
 							) : (
+								products &&
 								products.map(product => (
 									<Product key={product._id} product={product} col={3} />
 								))
