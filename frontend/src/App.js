@@ -3,6 +3,7 @@ import Header from "./components/layout/Header"
 import Home from "./components/Home"
 import Footer from "./components/layout/Footer"
 import ProductDetails from "./components/product/ProductDetails"
+import Login from './components/user/Login'
 
 import "./App.css"
 
@@ -16,6 +17,7 @@ function App() {
 						<Route path='/' element={<Home />} />
 						<Route path='/search/:keyword' element={<Home />} />
 						<Route path='/product/:id' element={<ProductDetails />} />
+						<Route path='/login' element={<Login />} />
 					</Routes>
 				</div>
 				<Footer />

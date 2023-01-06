@@ -9,7 +9,7 @@ const Header = () => {
 			<nav className='navbar row'>
 				<div className='col-12 col-md-3'>
 					<div className='navbar-brand'>
-						<Link to='/'className="text-decoration-none">
+						<Link to='/' className='text-decoration-none'>
 							<h3 className='text-white ms-3'>Sklep E-Commerce</h3>
 						</Link>
 					</div>
@@ -20,9 +20,9 @@ const Header = () => {
 				</div>
 
 				<div className='col-12 col-md-3 mt-4 mt-md-0 text-center'>
-					<button className='btn me-3' id='login_btn'>
+					<Link to='/login' className='btn me-3' id='login_btn'>
 						Zaloguj
-					</button>
+					</Link>
 
 					<span id='cart' className='ml-3'>
 						Koszyk
