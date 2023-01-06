@@ -313,12 +313,13 @@ footer {
 	background-color: #fa9c23;
 	border-color: #fa9c23;
 	color: white;
-	margin-top: 2.5rem;
+	margin: 2rem 0;
 }
 
 .wrapper form a {
 	font-size: 0.9rem;
 	color: grey;
+	text-decoration: none;
 }
 
 /* Avatar */
