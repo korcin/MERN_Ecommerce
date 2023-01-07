@@ -70,81 +70,81 @@ const Home = () => {
 					<h1 id='products_heading'>Najnowsze produkty</h1>
 					<section id='products' className='container mt-5'>
 						<div className='row'>
-							{keyword ? (
-								<Fragment>
-									<div className='col-6 col-md-3 mt-5 mb-5'>
-										<div className='px-5'>
-											<Range
-												marks={{
-													1: `1zł`,
-													5000: `5000zł`,
-												}}
-												min={1}
-												max={5000}
-												defaultValue={[1, 5000]}
-												tipFormatter={value => `${value}zł`}
-												tipProps={{
-													placement: "top",
-													visible: true,
-												}}
-												value={price}
-												onChange={price => setPrice(price)}
-											/>
-											<hr className='my-5' />
+							{/* {keyword ? ( */}
+							<Fragment>
+								<div className='col-6 col-md-3 mt-5 mb-5'>
+									<div className='px-5'>
+										<Range
+											marks={{
+												1: `1zł`,
+												5000: `5000zł`,
+											}}
+											min={1}
+											max={5000}
+											defaultValue={[1, 5000]}
+											tipFormatter={value => `${value}zł`}
+											tipProps={{
+												placement: "top",
+												visible: true,
+											}}
+											value={price}
+											onChange={price => setPrice(price)}
+										/>
+										<hr className='my-5' />
 
-											<div className='mt-5'>
-												<h4 className='mb-3'>Kategorie</h4>
-												<ul className='m-0 p-0'>
-													{categories.map(category => (
-														<li
-															style={{
-																cursor: "pointer",
-																listStyleType: "none",
-															}}
-															key={category}
-															onClick={() => setCategory(category)}>
-															{category}
-														</li>
-													))}
-												</ul>
-											</div>
-											<hr className='my-3' />
-											<div className='mt-5'>
-												<h4 className='mb-3'>Opinie</h4>
-												<ul className='m-0 p-0'>
-													{[5, 4, 3, 2, 1].map(star => (
-														<li
-															style={{
-																cursor: "pointer",
-																listStyleType: "none",
-															}}
-															key={star}
-															onClick={() => setRating(star)}>
-															<div className='rating-outer'>
-																<div
-																	className='rating-inner'
-																	style={{ width: `${star * 20}%` }}></div>
-															</div>
-														</li>
-													))}
-												</ul>
-											</div>
+										<div className='mt-5'>
+											<h4 className='mb-3'>Kategorie</h4>
+											<ul className='m-0 p-0'>
+												{categories.map(category => (
+													<li
+														style={{
+															cursor: "pointer",
+															listStyleType: "none",
+														}}
+														key={category}
+														onClick={() => setCategory(category)}>
+														{category}
+													</li>
+												))}
+											</ul>
+										</div>
+										<hr className='my-3' />
+										<div className='mt-5'>
+											<h4 className='mb-3'>Opinie</h4>
+											<ul className='m-0 p-0'>
+												{[5, 4, 3, 2, 1].map(star => (
+													<li
+														style={{
+															cursor: "pointer",
+															listStyleType: "none",
+														}}
+														key={star}
+														onClick={() => setRating(star)}>
+														<div className='rating-outer'>
+															<div
+																className='rating-inner'
+																style={{ width: `${star * 20}%` }}></div>
+														</div>
+													</li>
+												))}
+											</ul>
 										</div>
 									</div>
-									<div className='col-6 col-md-9'>
-										<div className='row'>
-											{products.map(product => (
-												<Product key={product._id} product={product} col={4} />
-											))}
-										</div>
+								</div>
+								<div className='col-6 col-md-9'>
+									<div className='row'>
+										{products.map(product => (
+											<Product key={product._id} product={product} col={5} />
+										))}
 									</div>
-								</Fragment>
-							) : (
-								products &&
-								products.map(product => (
-									<Product key={product._id} product={product} col={3} />
-								))
-							)}
+								</div>
+							</Fragment>
+							{/* // ) : (
+							// 	products &&
+							// 	products.map(product => (
+							// 		<Product key={product._id} product={product} col={3} />
+							// 	))
+							// )} */}
 						</div>
 					</section>
 
