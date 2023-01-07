@@ -19,7 +19,7 @@ const Header = () => {
 
 	return (
 		<Fragment>
-			<nav className='navbar row'>
+			<nav className='navbar row sticky-top'>
 				<div className='col-12 col-md-3'>
 					<div className='navbar-brand'>
 						<Link to='/' className='text-decoration-none'>
