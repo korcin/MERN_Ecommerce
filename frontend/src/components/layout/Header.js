@@ -4,12 +4,18 @@ import "../../App.css"
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { useAlert } from "react-alert"
+import { logout } from "../../actions/userActions"
 
 const Header = () => {
 	const alert = useAlert()
 	const dispatch = useDispatch()
 
 	const { user, loading } = useSelector(state => state.auth)
+
+	const logoutHandler = () => {
+		dispatch(logout())
+		alert.success("Pomyślnie wylogowano.")
+	}
 
 	return (
 		<Fragment>
@@ -47,14 +53,25 @@ const Header = () => {
 								<span>{user && user.name}</span>
 							</Link>
 
-							<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								{user && user.role !== 'admin' ? (
-									<Link className="dropdown-item" to="/orders/me">Moje zamówienia</Link>
+							<div
+								className='dropdown-menu'
+								aria-labelledby='dropdownMenuButton'>
+								{user && user.role !== "admin" ? (
+									<Link className='dropdown-item' to='/orders/me'>
+										Moje zamówienia
+									</Link>
 								) : (
-									<Link className="dropdown-item" to="/dashboard">Panel zarządzania</Link>
+									<Link className='dropdown-item' to='/dashboard'>
+										Panel zarządzania
+									</Link>
 								)}
-								<Link className="dropdown-item" to="/me">Profil</Link>
-								<Link className='dropdown-item text-danger' to='/'>
+								<Link className='dropdown-item' to='/me'>
+									Profil
+								</Link>
+								<Link
+									className='dropdown-item text-danger'
+									to='/'
+									onClick={logoutHandler}>
 									Wyloguj się
 								</Link>
 							</div>
