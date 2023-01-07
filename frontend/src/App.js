@@ -11,6 +11,7 @@ import Login from "./components/user/Login"
 import Register from "./components/user/Register"
 import Profile from "./components/user/Profile"
 
+import ProtectedRoute from "./components/route/ProtectedRoute"
 import { loadUser } from "./actions/userActions"
 import store from "./store"
 
@@ -32,7 +33,14 @@ function App() {
 						<Route path='/product/:id' element={<ProductDetails />} />
 						<Route path='/login' element={<Login />} />
 						<Route path='/register' element={<Register />} />
-						<Route path='/me' element={<Profile />} />
+						<Route
+							path='/me'
+							element={
+								<ProtectedRoute>
+									<Profile />
+								</ProtectedRoute>
+							}
+						/>
 					</Routes>
 				</div>
 				<Footer />
