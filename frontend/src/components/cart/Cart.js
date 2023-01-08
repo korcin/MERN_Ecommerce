@@ -3,12 +3,16 @@ import { Link } from "react-router-dom"
 import MetaData from "../layout/MetaData"
 import { useAlert } from "react-alert"
 import { useDispatch, useSelector } from "react-redux"
-import { addItemToCart } from "../../actions/cartActions"
+import { addItemToCart, removeItemFromCart } from "../../actions/cartActions"
 
 const Cart = () => {
 	const dispatch = useDispatch()
 
 	const { cartItems } = useSelector(state => state.cart)
+
+	const removeCartItemHandler = id => {
+		dispatch(removeItemFromCart(id))
+	}
 
 	const increaseQty = (id, quantity, stock) => {
 		const newQty = quantity + 1
@@ -29,7 +33,7 @@ const Cart = () => {
 	return (
 		<Fragment>
 			{cartItems.length === 0 ? (
-				<h2 classNameName='mt-5'>Twój koszyk jest pusty.</h2>
+				<h2 className='mt-5 text-center'>Twój koszyk jest pusty.</h2>
 			) : (
 				<Fragment>
 					<MetaData title={"Twój koszyk"} />
@@ -98,7 +102,10 @@ const Cart = () => {
 											<div className='col-4 col-lg-1 mt-4 mt-lg-0'>
 												<i
 													id='delete_cart_item'
-													className='fa fa-trash btn btn-danger'></i>
+													className='fa fa-trash btn btn-danger'
+													onClick={() =>
+														removeCartItemHandler(item.product)
+													}></i>
 											</div>
 										</div>
 									</div>
