@@ -3,9 +3,8 @@ import { useAlert } from "react-alert"
 import { useDispatch, useSelector } from "react-redux"
 import Loader from "../layout/Loader"
 import MetaData from "../layout/MetaData"
-import { Link } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { login, clearErrors } from "../../actions/userActions"
-import { useNavigate } from "react-router-dom"
 
 const Login = () => {
 	const [email, setEmail] = useState("")
@@ -14,19 +13,22 @@ const Login = () => {
 
 	const alert = useAlert()
 	const dispatch = useDispatch()
+	const location = useLocation()
 
 	const { isAuthenticated, error, loading } = useSelector(state => state.auth)
 
+	const redirect = location.search ? location.search.split("=")[1] : "/"
+
 	useEffect(() => {
 		if (isAuthenticated) {
-			navigate("/")
+			navigate(redirect)
 		}
 
 		if (error) {
 			alert.error(error)
 			dispatch(clearErrors())
 		}
-	}, [dispatch, alert, isAuthenticated, error, navigate])
+	}, [dispatch, alert, isAuthenticated, error, navigate, redirect])
 
 	const submitHandler = e => {
 		e.preventDefault()

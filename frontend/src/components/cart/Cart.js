@@ -1,12 +1,13 @@
 import React, { Fragment } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import MetaData from "../layout/MetaData"
-import { useAlert } from "react-alert"
+// import { useAlert } from "react-alert"
 import { useDispatch, useSelector } from "react-redux"
 import { addItemToCart, removeItemFromCart } from "../../actions/cartActions"
 
 const Cart = () => {
 	const dispatch = useDispatch()
+	const navigate = useNavigate()
 
 	const { cartItems } = useSelector(state => state.cart)
 
@@ -28,6 +29,10 @@ const Cart = () => {
 		if (newQty <= 0) return
 
 		dispatch(addItemToCart(id, newQty))
+	}
+
+	const checkoutHandler = () => {
+		navigate("/login?redirect=/shipping")
 	}
 
 	return (
@@ -132,7 +137,10 @@ const Cart = () => {
 								</p>
 
 								<hr />
-								<button id='checkout_btn' className='btn btn-primary btn-block fw-bold'>
+								<button
+									id='checkout_btn'
+									className='btn btn-primary btn-block fw-bold'
+									onClick={checkoutHandler}>
 									Wybierz dostawę i płatność
 								</button>
 							</div>
