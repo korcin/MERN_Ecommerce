@@ -57,7 +57,7 @@ const Cart = () => {
 												/>
 											</div>
 
-											<div className='col-5 col-lg-3'>
+											<div className='col-5 col-lg-3 text-wrap'>
 												<Link
 													to={`/product/${item.product}`}
 													className='text-decoration-none'>
@@ -120,12 +120,20 @@ const Cart = () => {
 								<hr />
 								<p>
 									Łączna kwota:{" "}
-									<span className='order-summary-values'>$765.56</span>
+									<span className='order-summary-values'>
+										{cartItems
+											.reduce(
+												(acc, item) => acc + item.quantity * item.price,
+												0
+											)
+											.toFixed(2)}{" "}
+										zł
+									</span>
 								</p>
 
 								<hr />
-								<button id='checkout_btn' className='btn btn-primary btn-block'>
-									Check out
+								<button id='checkout_btn' className='btn btn-primary btn-block fw-bold'>
+									Wybierz dostawę i płatność
 								</button>
 							</div>
 						</div>
