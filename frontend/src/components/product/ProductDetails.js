@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react"
+import React, { Fragment, useEffect, useState } from "react"
 import Loader from "../layout/Loader"
 import MetaData from "../layout/MetaData"
 import { Carousel } from "react-bootstrap"
@@ -8,6 +8,7 @@ import { getProductDetails, clearErrors } from "../../actions/productActions"
 import { useParams } from "react-router-dom"
 
 const ProductDetails = ({ match }) => {
+	const [quantity, setQuantity] = useState(1)
 	const dispatch = useDispatch()
 	const alert = useAlert()
 	const { id } = useParams()
@@ -21,6 +22,24 @@ const ProductDetails = ({ match }) => {
 			dispatch(clearErrors())
 		}
 	}, [dispatch, alert, error, id])
+
+	const increaseQty = () => {
+		const count = document.querySelector(".count")
+
+		if (count.valueAsNumber >= product.stock) return
+
+		const qty = count.valueAsNumber + 1
+		setQuantity(qty)
+	}
+
+	const decreaseQty = () => {
+		const count = document.querySelector(".count")
+
+		if (count.valueAsNumber <= 1) return
+
+		const qty = count.valueAsNumber - 1
+		setQuantity(qty)
+	}
 
 	return (
 		<Fragment>
@@ -63,16 +82,20 @@ const ProductDetails = ({ match }) => {
 
 							<p id='product_price'>{product.price} zł</p>
 							<div className='stockCounter d-inline'>
-								<span className='btn btn-danger minus'>-</span>
+								<span className='btn btn-danger minus' onClick={decreaseQty}>
+									-
+								</span>
 
 								<input
 									type='number'
 									className='form-control count d-inline'
-									value='1'
+									value={quantity}
 									readOnly
 								/>
 
-								<span className='btn btn-primary plus'>+</span>
+								<span className='btn btn-primary plus' onClick={increaseQty}>
+									+
+								</span>
 							</div>
 							<button
 								type='button'
