@@ -6,11 +6,13 @@ import { useAlert } from "react-alert"
 import { useDispatch, useSelector } from "react-redux"
 import { getProductDetails, clearErrors } from "../../actions/productActions"
 import { useParams } from "react-router-dom"
+import { addItemToCart } from "../../actions/cartActions"
 
-const ProductDetails = ({ match }) => {
+const ProductDetails = () => {
 	const [quantity, setQuantity] = useState(1)
 	const dispatch = useDispatch()
 	const alert = useAlert()
+	const params = useParams()
 	const { id } = useParams()
 	const { loading, error, product } = useSelector(state => state.productDetails)
 
@@ -39,6 +41,11 @@ const ProductDetails = ({ match }) => {
 
 		const qty = count.valueAsNumber - 1
 		setQuantity(qty)
+	}
+
+	const addToCart = () => {
+		dispatch(addItemToCart(params.id, quantity))
+		alert.success("Dodano do koszyka")
 	}
 
 	return (
@@ -100,7 +107,9 @@ const ProductDetails = ({ match }) => {
 							<button
 								type='button'
 								id='cart_btn'
-								className='btn btn-primary d-inline ms-3'>
+								className='btn btn-primary d-inline ms-3'
+								disabled={product.stock === 0}
+								onClick={addToCart}>
 								Dodaj do koszyka
 							</button>
 
