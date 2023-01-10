@@ -619,10 +619,35 @@ ul.CTAs a {
 	color: grey;
 }
 
+@media (max-width: 575.98px) {
+	.checkout {
+		flex-direction: column;
+		align-items: center;
+		margin-top: 1rem;
+	}
+
+	.float-right {
+		padding: 5px 0;
+	}
+
+	.wrapper-mobile {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 3rem;
+	
+		font-weight: 700;
+	}
+}
+
 @media (min-width: 992px) {
 	.card-img-top {
 		width: 150px;
 		height: 100px;
+	}
+
+	.checkout {
+		width: auto;
 	}
 }
 
