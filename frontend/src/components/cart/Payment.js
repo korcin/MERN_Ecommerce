@@ -36,13 +36,67 @@ const Payment = () => {
 
 	useEffect(() => {}, [])
 
+	const orderInfo = JSON.parse(sessionStorage.getItem("orderInfo"))
+	const paymentData = {
+		amount: Math.round(orderInfo.totalPrice * 100),
+	}
+
+	const submitHandler = async e => {
+		e.preventDefault()
+
+		document.querySelector("#pay_btn").disabled = true
+
+		let res
+
+		try {
+			const config = {
+				headers: {
+					"Content-Type": "application/json",
+				},
+			}
+
+			res = await axios.post("/api/v1/payment/process", paymentData, config)
+
+			const clientSecret = res.data.client_secret
+
+			if (!stripe || !elements) {
+				return
+			}
+
+			const result = await stripe.confirmCardPayment(clientSecret, {
+				payment_method: {
+					card: elements.getElement(CardNumberElement),
+					billing_details: {
+						name: user.name,
+						email: user.email,
+					},
+				},
+			})
+
+			if (result.error) {
+				alert.error(result.error.message)
+				document.querySelector("#pay_btn").disabled = false
+			} else {
+				// Czy płatność jest kontynuowana
+				if (result.paymentIntent.status === "succeeded") {
+					navigate("/success")
+				} else {
+					alert.error("Wystąpił problem z płatnością.")
+				}
+			}
+		} catch (error) {
+			document.querySelector("#pay_btn").disabled = false
+			alert.error(error.response.data.message)
+		}
+	}
+
 	return (
 		<Fragment>
 			<MetaData title={"Płatność"} />
 			<CheckoutSteps shipping confirmOrder payment />
-			<div className='row wrapper'>
+			<div className='row wrapper wrapper-mobile'>
 				<div className='col-10 col-lg-5'>
-					<form className='shadow-lg'>
+					<form className='shadow-lg' onSubmit={submitHandler}>
 						<h1 className='mb-4'>Dane karty</h1>
 						<div className='form-group mb-3'>
 							<label htmlFor='card_num_field'>Numer katry</label>
@@ -74,9 +128,11 @@ const Payment = () => {
 							/>
 						</div>
 
-						<button id='pay_btn' type='submit' className='btn btn-block py-3 fw-bold'>
-							Zapłać
-						</button>
+						<div className='d-grid'>
+							<button id='pay_btn' type='submit' className='btn py-3 fw-bold'>
+								Zapłać {` - ${orderInfo && orderInfo.totalPrice}`}
+							</button>
+						</div>
 					</form>
 				</div>
 			</div>
