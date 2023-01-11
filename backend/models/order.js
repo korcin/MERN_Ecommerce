@@ -26,7 +26,7 @@ const orderSchema = mongoose.Schema({
 	user: {
 		type: mongoose.Schema.Types.ObjectId,
 		require: true,
-		ref: "Użytkownik",
+		ref: "User",
 	},
 	orderItems: [
 		{
