@@ -85,7 +85,9 @@ const ConfirmOrder = () => {
 						<hr />
 						<p>
 							Wartość koszyka:
-							<span className='order-summary-values'>{itemsPrice} zł</span>
+							<span className='order-summary-values'>
+								{itemsPrice.toFixed(2)} zł
+							</span>
 						</p>
 						<p>
 							Dostawa:
