@@ -20,6 +20,7 @@ import ConfirmOrder from "./components/cart/ConfirmOrder"
 import Payment from "./components/cart/Payment"
 import OrderSuccess from "./components/cart/OrderSuccess"
 import ListOrders from "./components/order/ListOrders"
+import OrderDetails from "./components/order/OrderDetails"
 import { Elements } from "@stripe/react-stripe-js"
 import { loadStripe } from "@stripe/stripe-js"
 
@@ -110,6 +111,14 @@ function App() {
 							element={
 								<ProtectedRoute>
 									<ListOrders />
+								</ProtectedRoute>
+							}
+						/>
+						<Route
+							path='/order/:id'
+							element={
+								<ProtectedRoute>
+									<OrderDetails />
 								</ProtectedRoute>
 							}
 						/>
