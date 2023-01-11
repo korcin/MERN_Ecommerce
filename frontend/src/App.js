@@ -19,6 +19,7 @@ import Shipping from "./components/cart/Shipping"
 import ConfirmOrder from "./components/cart/ConfirmOrder"
 import Payment from "./components/cart/Payment"
 import OrderSuccess from "./components/cart/OrderSuccess"
+import ListOrders from "./components/order/ListOrders"
 import { Elements } from "@stripe/react-stripe-js"
 import { loadStripe } from "@stripe/stripe-js"
 
@@ -101,6 +102,14 @@ function App() {
 							element={
 								<ProtectedRoute>
 									<OrderSuccess />
+								</ProtectedRoute>
+							}
+						/>
+						<Route
+							path='/orders/me'
+							element={
+								<ProtectedRoute>
+									<ListOrders />
 								</ProtectedRoute>
 							}
 						/>
