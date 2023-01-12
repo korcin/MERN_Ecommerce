@@ -12,6 +12,7 @@ import {
 import { useParams } from "react-router-dom"
 import { addItemToCart } from "../../actions/cartActions"
 import { NEW_REVIEW_RESET } from "../../constants/productConstants"
+import Reviews from "../review/Reviews"
 
 const ProductDetails = () => {
 	const [quantity, setQuantity] = useState(1)
@@ -212,8 +213,8 @@ const ProductDetails = () => {
 								</div>
 							)}
 
-							<div className='row mt-2 mb-5'>
-								<div className='rating w-50'>
+							<div className='row mt-2'>
+								<div className='rating'>
 									<div
 										className='modal fade'
 										id='ratingModal'
@@ -278,6 +279,9 @@ const ProductDetails = () => {
 							</div>
 						</div>
 					</div>
+					{product.reviews && product.reviews.length > 0 && (
+						<Reviews reviews={product.reviews} />
+					)}
 				</Fragment>
 			)}
 		</Fragment>
