@@ -15,7 +15,7 @@ exports.newProduct = catchAsyncErrors(async (req, res, next) => {
 	})
 })
 
-//Wyświetl wszystkie produkty => /api/v1/products?keywords=apple
+//Wyświetl wszystkie produkty => /api/v1/products?keyword=apple
 exports.getProducts = catchAsyncErrors(async (req, res, next) => {
 	const resPerPage = 4
 	const productsCount = await Product.countDocuments()
@@ -35,6 +35,16 @@ exports.getProducts = catchAsyncErrors(async (req, res, next) => {
 		productsCount,
 		resPerPage,
 		filteredProductsCount,
+		products,
+	})
+})
+
+//Wyświetl wszystkie produkty (ADMIN) => /api/v1/admin/products
+exports.getAdminProducts = catchAsyncErrors(async (req, res, next) => {
+	const products = await Product.find()
+
+	res.status(200).json({
+		success: true,
 		products,
 	})
 })

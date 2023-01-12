@@ -22,6 +22,7 @@ import OrderSuccess from "./components/cart/OrderSuccess"
 import ListOrders from "./components/order/ListOrders"
 import OrderDetails from "./components/order/OrderDetails"
 import Dashboard from "./components/admin/Dashboard"
+import ProductList from "./components/admin/ProductList"
 import { Elements } from "@stripe/react-stripe-js"
 import { loadStripe } from "@stripe/stripe-js"
 
@@ -138,6 +139,14 @@ function App() {
 						element={
 							<ProtectedRoute isAdmin={true}>
 								<Dashboard />
+							</ProtectedRoute>
+						}
+					/>
+					<Route
+						path='/admin/products'
+						element={
+							<ProtectedRoute isAdmin={true}>
+								<ProductList />
 							</ProtectedRoute>
 						}
 					/>
