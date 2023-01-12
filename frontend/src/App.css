@@ -635,8 +635,16 @@ ul.CTAs a {
 		justify-content: center;
 		align-items: center;
 		margin-top: 3rem;
-	
+
 		font-weight: 700;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.sidebar-wrapper {
+		flex-direction: column;
+		margin-top: 10px;
+		min-height: 0;
 	}
 }
 
