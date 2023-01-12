@@ -21,6 +21,7 @@ import Payment from "./components/cart/Payment"
 import OrderSuccess from "./components/cart/OrderSuccess"
 import ListOrders from "./components/order/ListOrders"
 import OrderDetails from "./components/order/OrderDetails"
+import Dashboard from "./components/admin/Dashboard"
 import { Elements } from "@stripe/react-stripe-js"
 import { loadStripe } from "@stripe/stripe-js"
 
@@ -131,6 +132,16 @@ function App() {
 						</Elements>
 					)}
 				</div>
+				<Routes>
+					<Route
+						path='/dashboard'
+						element={
+							<ProtectedRoute isAdmin={true}>
+								<Dashboard />
+							</ProtectedRoute>
+						}
+					/>
+				</Routes>
 				<Footer />
 			</div>
 		</Router>
