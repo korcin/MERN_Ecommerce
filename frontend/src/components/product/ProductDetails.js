@@ -4,17 +4,26 @@ import MetaData from "../layout/MetaData"
 import { Carousel } from "react-bootstrap"
 import { useAlert } from "react-alert"
 import { useDispatch, useSelector } from "react-redux"
-import { getProductDetails, clearErrors } from "../../actions/productActions"
+import {
+	getProductDetails,
+	clearErrors,
+	newReview,
+} from "../../actions/productActions"
 import { useParams } from "react-router-dom"
 import { addItemToCart } from "../../actions/cartActions"
+import { NEW_REVIEW_RESET } from "../../constants/productConstants"
 
 const ProductDetails = () => {
 	const [quantity, setQuantity] = useState(1)
+	const [rating, setRating] = useState(0)
+	const [comment, setComment] = useState("")
 	const dispatch = useDispatch()
 	const alert = useAlert()
 	const params = useParams()
 	const { id } = useParams()
 	const { loading, error, product } = useSelector(state => state.productDetails)
+	const { user } = useSelector(state => state.auth)
+	const { error: reviewError, success } = useSelector(state => state.newReview)
 
 	useEffect(() => {
 		dispatch(getProductDetails(id))
@@ -23,7 +32,17 @@ const ProductDetails = () => {
 			alert.error(error)
 			dispatch(clearErrors())
 		}
-	}, [dispatch, alert, error, id])
+
+		if (reviewError) {
+			alert.error(reviewError)
+			dispatch(clearErrors())
+		}
+
+		if (success) {
+			alert.success("Dodano opinię.")
+			dispatch({ type: NEW_REVIEW_RESET })
+		}
+	}, [dispatch, alert, error, reviewError, id, success])
 
 	const increaseQty = () => {
 		const count = document.querySelector(".count")
@@ -46,6 +65,50 @@ const ProductDetails = () => {
 	const addToCart = () => {
 		dispatch(addItemToCart(params.id, quantity))
 		alert.success("Dodano do koszyka")
+	}
+
+	function setUserRatings() {
+		const stars = document.querySelectorAll(".star")
+		stars.forEach((star, index) => {
+			star.starValue = index + 1
+			;["click", "mouseover", "mouseout"].forEach(function (e) {
+				star.addEventListener(e, showRatings)
+			})
+		})
+		function showRatings(e) {
+			stars.forEach((star, index) => {
+				if (e.type === "click") {
+					if (index < this.starValue) {
+						star.classList.add("orange")
+
+						setRating(this.starValue)
+					} else {
+						star.classList.remove("orange")
+					}
+				}
+
+				if (e.type === "mouseover") {
+					if (index < this.starValue) {
+						star.classList.add("yellow")
+					} else {
+						star.classList.remove("yellow")
+					}
+				}
+
+				if (e.type === "mouseout") {
+					star.classList.remove("yellow")
+				}
+			})
+		}
+	}
+
+	const reviewHandler = () => {
+		const formData = new FormData()
+		formData.set("rating", rating)
+		formData.set("comment", comment)
+		formData.set("productId", params.id)
+
+		dispatch(newReview(formData))
 	}
 
 	return (
@@ -133,14 +196,21 @@ const ProductDetails = () => {
 								Producent: <strong>{product.seller}</strong>
 							</p>
 
-							<button
-								id='review_btn'
-								type='button'
-								className='btn btn-primary mt-4'
-								data-bs-toggle='modal'
-								data-bs-target='#ratingModal'>
-								Dodaj opinię
-							</button>
+							{user ? (
+								<button
+									id='review_btn'
+									type='button'
+									className='btn btn-primary mt-4'
+									data-bs-toggle='modal'
+									data-bs-target='#ratingModal'
+									onClick={setUserRatings}>
+									Dodaj opinię
+								</button>
+							) : (
+								<div className='alert alert-danger mt-5' type='alert'>
+									Zaloguj się aby dodać opinię
+								</div>
+							)}
 
 							<div className='row mt-2 mb-5'>
 								<div className='rating w-50'>
@@ -185,11 +255,16 @@ const ProductDetails = () => {
 													<textarea
 														name='review'
 														id='review'
-														className='form-control mt-3'></textarea>
+														className='form-control mt-3'
+														value={comment}
+														onChange={e =>
+															setComment(e.target.value)
+														}></textarea>
 
 													<div className='modal-footer'>
 														<button
 															className='my-3 float-right submit-btn px-4 text-white'
+															onClick={reviewHandler}
 															data-bs-dismiss='modal'
 															aria-label='Close'>
 															Dodaj opinię
