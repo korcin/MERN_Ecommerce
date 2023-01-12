@@ -51,30 +51,30 @@ const OrderDetails = () => {
 				<Fragment>
 					<div className='row d-flex justify-content-between'>
 						<div className='col-12 col-lg-8 mt-5 order-details'>
-							<h1 className='my-5'>Order #{order._id}</h1>
+							<h1 className='my-5'>Nr zamówienia #{order._id}</h1>
 
-							<h4 className='mb-4'>Shipping Info</h4>
+							<h4 className='mb-4'>Dane do dostawy</h4>
 							<p>
-								<b>Name:</b> {user && user.name}
+								<b>Nazwa:</b> {user && user.name}
 							</p>
 							<p>
-								<b>Phone:</b> {shippingInfo && shippingInfo.phoneNo}
+								<b>Telefon:</b> {shippingInfo && shippingInfo.phoneNo}
 							</p>
 							<p className='mb-4'>
-								<b>Address:</b> {shippingDetails}
+								<b>Adres:</b> {shippingDetails}
 							</p>
 							<p>
-								<b>Amount:</b> {totalPrice} zł
+								<b>Łączna kwota:</b> {totalPrice} zł
 							</p>
 
 							<hr />
 
-							<h4 className='my-4'>Payment</h4>
+							<h4 className='my-4'>Płatność</h4>
 							<p className={isPaid ? "greenColor" : "redColor"}>
 								<b>{isPaid ? "OPŁACONE" : "NIEOPŁACONE"}</b>
 							</p>
 
-							<h4 className='my-4'>Order Status:</h4>
+							<h4 className='my-4'>Status zamówienia:</h4>
 							<p
 								className={
 									order.orderStatus &&
@@ -85,7 +85,7 @@ const OrderDetails = () => {
 								<b>{orderStatus}</b>
 							</p>
 
-							<h4 className='my-4'>Order Items:</h4>
+							<h4 className='my-4'>Zamówienie:</h4>
 
 							<hr />
 							<div className='cart-item my-1'>
@@ -101,8 +101,8 @@ const OrderDetails = () => {
 												/>
 											</div>
 
-											<div className='col-5 col-lg-5 text-decoration-none'>
-												<Link to={`/products/${item.product}`}></Link>
+											<div className='col-5 col-lg-5'>
+												<Link to={`/products/${item.product}`}>{item.name}</Link>
 											</div>
 
 											<div className='col-4 col-lg-2 mt-4 mt-lg-0'>
