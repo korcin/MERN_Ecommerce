@@ -57,8 +57,16 @@
 		"ratings": 3.5,
 		"images": [
 			{
-				"public_id": "products/xiaomi2_gd5e1y",
-				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701799/products/xiaomi2_gd5e1y.jpg"
+				"public_id": "products/xiaomi10_fozznk",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672917648/products/xiaomi10_fozznk.webp"
+			},
+			{
+				"public_id": "products/xiaomi10_1_rltrwc",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672917649/products/xiaomi10_1_rltrwc.webp"
+			},
+			{
+				"public_id": "products/xiaomi10_2_lfqghi",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672917649/products/xiaomi10_2_lfqghi.webp"
 			}
 		],
 		"category": "Telefony",
