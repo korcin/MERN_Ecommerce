@@ -16,7 +16,7 @@ const Range = createSliderWithTooltip(Slider.Range)
 
 const Home = () => {
 	const [currentPage, setCurrentPage] = useState(1)
-	const [price, setPrice] = useState([1, 5000])
+	const [price, setPrice] = useState([1, 7000])
 	const [category, setCategory] = useState("")
 	const [rating, setRating] = useState(0)
 
@@ -77,11 +77,11 @@ const Home = () => {
 										<Range
 											marks={{
 												1: `1zł`,
-												5000: `5000zł`,
+												7000: `7000zł`,
 											}}
 											min={1}
-											max={5000}
-											defaultValue={[1, 5000]}
+											max={7000}
+											defaultValue={[1, 7000]}
 											tipFormatter={value => `${value}zł`}
 											tipProps={{
 												placement: "top",
