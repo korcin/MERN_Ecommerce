@@ -45,7 +45,7 @@ const ProductList = () => {
 		const data = {
 			columns: [
 				{
-					label: "Nr zamówienia",
+					label: "ID produktu",
 					field: "id",
 					sort: "asc",
 				},
