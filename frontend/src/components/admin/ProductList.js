@@ -95,7 +95,7 @@ const ProductList = () => {
 						) : (
 							<MDBDataTable
 								data={setProducts()}
-								// className='px-5'
+								className='px-3'
 								bordered
 								striped
 								hover
