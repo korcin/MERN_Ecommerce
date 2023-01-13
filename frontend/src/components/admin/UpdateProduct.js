@@ -2,15 +2,28 @@ import React, { Fragment, useState, useEffect } from "react"
 import MetaData from "../layout/MetaData"
 import Sidebar from "./Sidebar"
 import { useAlert } from "react-alert"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { newProduct, clearErrors } from "../../actions/productActions"
-import { NEW_PRODUCT_RESET } from "../../constants/productConstants"
+import {
+	updateProduct,
+	getProductDetails,
+	clearErrors,
+} from "../../actions/productActions"
+import { UPDATE_PRODUCT_RESET } from "../../constants/productConstants"
 
-const NewProduct = () => {
+const UpdateProduct = () => {
 	const alert = useAlert()
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
+	const params = useParams()
+	const productId = params.id
+
+	const { error, product } = useSelector(state => state.productDetails)
+	const {
+		loading,
+		error: updateError,
+		isUpdated,
+	} = useSelector(state => state.product)
 
 	const [name, setName] = useState("")
 	const [price, setPrice] = useState(0)
@@ -19,6 +32,7 @@ const NewProduct = () => {
 	const [stock, setStock] = useState(0)
 	const [seller, setSeller] = useState("")
 	const [images, setImages] = useState([])
+	const [oldImages, setOldImages] = useState([])
 	const [imagesPreview, setImagesPreview] = useState([])
 
 	const categories = [
@@ -31,20 +45,44 @@ const NewProduct = () => {
 		"Akcesoria",
 	]
 
-	const { loading, error, success } = useSelector(state => state.newProduct)
-
 	useEffect(() => {
+		if (product && product._id !== productId) {
+			dispatch(getProductDetails(productId))
+		} else {
+			setName(product.name)
+			setPrice(product.price)
+			setDescription(product.description)
+			setCategory(product.category)
+			setSeller(product.seller)
+			setStock(product.stock)
+			setOldImages(product.images)
+		}
+
 		if (error) {
 			alert.error(error)
 			dispatch(clearErrors())
 		}
 
-		if (success) {
-			navigate("/admin/products")
-			alert.success("Stworzono produkt.")
-			dispatch({ type: NEW_PRODUCT_RESET })
+		if (updateError) {
+			alert.error(updateError)
+			dispatch(clearErrors())
 		}
-	}, [dispatch, alert, error, success, navigate])
+
+		if (isUpdated) {
+			navigate("/admin/products")
+			alert.success("Zaktualizowano produkt.")
+			dispatch({ type: UPDATE_PRODUCT_RESET })
+		}
+	}, [
+		dispatch,
+		alert,
+		error,
+		isUpdated,
+		navigate,
+		updateError,
+		product,
+		productId,
+	])
 
 	const submitHandler = e => {
 		e.preventDefault()
@@ -61,7 +99,7 @@ const NewProduct = () => {
 			formData.append("images", image)
 		})
 
-		dispatch(newProduct(formData))
+		dispatch(updateProduct(product._id, formData))
 	}
 
 	const onChange = e => {
@@ -69,6 +107,7 @@ const NewProduct = () => {
 
 		setImagesPreview([])
 		setImages([])
+		setOldImages([])
 
 		files.forEach(file => {
 			const reader = new FileReader()
@@ -86,7 +125,7 @@ const NewProduct = () => {
 
 	return (
 		<Fragment>
-			<MetaData title={"Stwórz produkt"} />
+			<MetaData title={"Aktualizacja produktu"} />
 			<div className='row'>
 				<div className='col-12 col-md-2'>
 					<Sidebar />
@@ -99,7 +138,7 @@ const NewProduct = () => {
 								className='shadow-lg'
 								onSubmit={submitHandler}
 								encType='multipart/form-data'>
-								<h1 className='mb-4'>Nowy produkt</h1>
+								<h1 className='mb-4'>Zaktualizuj produkt</h1>
 
 								<div className='form-group'>
 									<label htmlFor='name_field'>Nazwa</label>
@@ -185,6 +224,19 @@ const NewProduct = () => {
 											Wybierz zdjęcia
 										</label>
 									</div>
+
+									{oldImages &&
+										oldImages.map(img => (
+											<img
+												key={img}
+												src={img.url}
+												alt={img.url}
+												className='mt-3 mr-2'
+												width='55'
+												height='52'
+											/>
+										))}
+
 									{imagesPreview.map(img => (
 										<img
 											src={img}
@@ -202,7 +254,7 @@ const NewProduct = () => {
 									type='submit'
 									className='btn btn-block py-3'
 									disabled={loading ? true : false}>
-									STWÓRZ
+									ZAKTUALIZUJ
 								</button>
 							</form>
 						</div>
@@ -213,4 +265,4 @@ const NewProduct = () => {
 	)
 }
 
-export default NewProduct
+export default UpdateProduct

@@ -11,6 +11,9 @@ import {
 	DELETE_PRODUCT_REQUEST,
 	DELETE_PRODUCT_SUCCESS,
 	DELETE_PRODUCT_FAIL,
+	UPDATE_PRODUCT_REQUEST,
+	UPDATE_PRODUCT_SUCCESS,
+	UPDATE_PRODUCT_FAIL,
 	NEW_PRODUCT_FAIL,
 	PRODUCT_DETAILS_REQUEST,
 	PRODUCT_DETAILS_SUCCESS,
@@ -131,6 +134,35 @@ export const newProduct = productData => async dispatch => {
 		console.log(error.response)
 		dispatch({
 			type: NEW_PRODUCT_FAIL,
+			payload: error.response.data.message,
+		})
+	}
+}
+
+export const updateProduct = (id, productData) => async dispatch => {
+	try {
+		dispatch({ type: UPDATE_PRODUCT_REQUEST })
+
+		const config = {
+			headers: {
+				"Content-Type": "application/json",
+			},
+		}
+
+		const { data } = await axios.put(
+			`/api/v1/admin/product/${id}`,
+			productData,
+			config
+		)
+
+		dispatch({
+			type: UPDATE_PRODUCT_SUCCESS,
+			payload: data.success,
+		})
+	} catch (error) {
+		console.log(error.response)
+		dispatch({
+			type: UPDATE_PRODUCT_FAIL,
 			payload: error.response.data.message,
 		})
 	}
