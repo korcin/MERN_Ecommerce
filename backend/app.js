@@ -26,7 +26,6 @@ app.use(
 	})
 )
 app.use(cookieParser())
-app.use(fileUpload())
 
 //Import wszystkich ścieżek
 const products = require("./routes/product")
