@@ -6,8 +6,8 @@ import Loader from "../layout/Loader"
 import Sidebar from "./Sidebar"
 import { useAlert } from "react-alert"
 import { useDispatch, useSelector } from "react-redux"
-import { allUsers, clearErrors } from "../../actions/userActions"
-// import { DELETE_USER_RESET } from "../../constants/userConstants"
+import { allUsers, clearErrors, deleteUser } from "../../actions/userActions"
+import { DELETE_USER_RESET } from "../../constants/userConstants"
 
 const UsersList = () => {
 	const alert = useAlert()
@@ -15,7 +15,7 @@ const UsersList = () => {
 	const navigate = useNavigate()
 
 	const { loading, error, users } = useSelector(state => state.allUsers)
-	// const { isDeleted } = useSelector(state => state.user)
+	const { isDeleted } = useSelector(state => state.user)
 
 	useEffect(() => {
 		dispatch(allUsers())
@@ -25,16 +25,16 @@ const UsersList = () => {
 			dispatch(clearErrors())
 		}
 
-		// if (isDeleted) {
-		// 	alert.success("Usunięto zamówienie.")
-		// 	navigate("/admin/orders")
-		// 	dispatch({ type: DELETE_ORDER_RESET })
-		// }
-	}, [dispatch, alert, error])
+		if (isDeleted) {
+			alert.success("Usunięto użytkownika.")
+			navigate("/admin/users")
+			dispatch({ type: DELETE_USER_RESET })
+		}
+	}, [dispatch, alert, error, isDeleted, navigate])
 
-	// const deleteOrderHandler = id => {
-	// 	dispatch(deleteOrder(id))
-	// }
+	const deleteUserHandler = id => {
+		dispatch(deleteUser(id))
+	}
 
 	const setUsers = () => {
 		const data = {
@@ -79,7 +79,7 @@ const UsersList = () => {
 							className='btn btn-primary py-1 px-2'>
 							<i className='fa fa-pencil'></i>
 						</Link>
-						<button className='btn btn-danger py-1 px-2 mx-2'>
+						<button className='btn btn-danger py-1 px-2 mx-2' onClick={() => deleteUserHandler(user._id)}>
 							<i className='fa fa-trash'></i>
 						</button>
 					</Fragment>
