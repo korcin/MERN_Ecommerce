@@ -44,7 +44,7 @@ const UpdateProfile = () => {
 				type: UPDATE_PROFILE_RESET,
 			})
 		}
-	}, [dispatch, alert, error, navigate, isUpdated])
+	}, [dispatch, alert, error, navigate, isUpdated, user])
 
 	const submitHandler = e => {
 		e.preventDefault()
@@ -53,7 +53,6 @@ const UpdateProfile = () => {
 		formData.set("name", name)
 		formData.set("email", email)
 		formData.set("avatar", avatar)
-
 		dispatch(updateProfile(formData))
 	}
 
@@ -106,7 +105,7 @@ const UpdateProfile = () => {
 						</div>
 
 						<div className='form-group'>
-							<label for='avatar_upload'>Zdjęcie</label>
+							<label htmlFor='avatar_upload'>Zdjęcie</label>
 							<div className='d-flex align-items-center'>
 								<div>
 									<figure className='avatar mr-3 item-rtl'>
