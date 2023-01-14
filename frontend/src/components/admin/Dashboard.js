@@ -7,11 +7,13 @@ import Sidebar from "./Sidebar"
 import { useDispatch, useSelector } from "react-redux"
 import { getAdminProducts } from "../../actions/productActions"
 import { allOrders } from "../../actions/orderActions"
+import { allUsers } from "../../actions/userActions"
 
 const Dashboard = () => {
 	const dispatch = useDispatch()
 
 	const { products } = useSelector(state => state.products)
+	const { users } = useSelector(state => state.allUsers)
 	const { orders, totalAmount, loading } = useSelector(state => state.allOrders)
 
 	let outOfStock = 0
@@ -24,6 +26,7 @@ const Dashboard = () => {
 	useEffect(() => {
 		dispatch(getAdminProducts())
 		dispatch(allOrders())
+		dispatch(allUsers())
 	}, [dispatch])
 
 	return (
@@ -46,7 +49,7 @@ const Dashboard = () => {
 										<div className='card-body'>
 											<div className='text-center card-font-size'>
 												Całkowita kwota:
-												<br /> <b>{totalAmount} zł</b>
+												<br /> <b>{totalAmount && totalAmount.toFixed(2)} zł</b>
 											</div>
 										</div>
 									</div>
@@ -97,12 +100,12 @@ const Dashboard = () => {
 										<div className='card-body'>
 											<div className='text-center card-font-size'>
 												Użytkownicy
-												<br /> <b>45</b>
+												<br /> <b>{users && users.length}</b>
 											</div>
 										</div>
 										<Link
 											className='card-footer text-white clearfix small z-1'
-											href='/admin/users'>
+											to='/admin/users'>
 											<span className='float-left'>Zobacz szczegóły</span>
 											<span className='float-right'>
 												<i className='fa fa-angle-right'></i>
