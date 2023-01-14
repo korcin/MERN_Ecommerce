@@ -8,7 +8,8 @@ import {
 	newReviewReducer,
 	newProductReducer,
 	productReducer,
-	productReviewsReducer
+	productReviewsReducer,
+	reviewReducer,
 } from "./reducers/productReducers"
 
 import {
@@ -42,6 +43,7 @@ const reducer = combineReducers({
 	orderDetails: orderDetailsReducer,
 	newReview: newReviewReducer,
 	productReviews: productReviewsReducer,
+	review: reviewReducer,
 	product: productReducer,
 	allOrders: allOrdersReducer,
 	order: orderReducer,

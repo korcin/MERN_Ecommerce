@@ -24,6 +24,9 @@ import {
 	GET_REVIEWS_REQUEST,
 	GET_REVIEWS_SUCCESS,
 	GET_REVIEWS_FAIL,
+	DELETE_REVIEW_REQUEST,
+	DELETE_REVIEW_SUCCESS,
+	DELETE_REVIEW_FAIL,
 	CLEAR_ERRORS,
 } from "../constants/productConstants"
 
@@ -134,7 +137,6 @@ export const newProduct = productData => async dispatch => {
 			payload: data,
 		})
 	} catch (error) {
-		console.log(error.response)
 		dispatch({
 			type: NEW_PRODUCT_FAIL,
 			payload: error.response.data.message,
@@ -163,7 +165,6 @@ export const updateProduct = (id, productData) => async dispatch => {
 			payload: data.success,
 		})
 	} catch (error) {
-		console.log(error.response)
 		dispatch({
 			type: UPDATE_PRODUCT_FAIL,
 			payload: error.response.data.message,
@@ -203,6 +204,25 @@ export const getProductReviews = (id) => async dispatch => {
 	} catch (error) {
 		dispatch({
 			type: GET_REVIEWS_FAIL,
+			payload: error.response.data.message,
+		})
+	}
+}
+
+// Usuń opinię produktu
+export const deleteReview = (id, productId) => async dispatch => {
+	try {
+		dispatch({ type: DELETE_REVIEW_REQUEST })
+
+		const { data } = await axios.delete(`/api/v1/reviews?id=${id}&productId=${productId}`)
+
+		dispatch({
+			type: DELETE_REVIEW_SUCCESS,
+			payload: data.success,
+		})
+	} catch (error) {
+		dispatch({
+			type: DELETE_REVIEW_FAIL,
 			payload: error.response.data.message,
 		})
 	}
