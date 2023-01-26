@@ -14,14 +14,14 @@ import { addItemToCart } from "../../actions/cartActions"
 import { NEW_REVIEW_RESET } from "../../constants/productConstants"
 import Reviews from "../review/Reviews"
 
-import { useRecommendations } from "@algolia/recommend-react"
+import { useRelatedProducts } from "@algolia/recommend-react"
 import recommend from "@algolia/recommend"
 
 const recommendClient = recommend(
 	"BYAK94QT0C",
 	"45e7e17c64c905886ecaabb6088646a6"
 )
-const indexName = "eletronics"
+const indexName = "electronics"
 
 const ProductDetails = ({ currentObjectID }) => {
 	const [quantity, setQuantity] = useState(1)
@@ -121,8 +121,7 @@ const ProductDetails = ({ currentObjectID }) => {
 		dispatch(newReview(formData))
 	}
 
-	const { recommendations } = useRecommendations({
-		model: "related-products",
+	const { recommendations } = useRelatedProducts({
 		recommendClient,
 		indexName,
 		objectIDs: [currentObjectID],
