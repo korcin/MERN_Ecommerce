@@ -21,7 +21,8 @@ const Home = () => {
 	const [rating, setRating] = useState(0)
 
 	const categories = [
-		"Podzespoły komputerowe",
+		"Karty graficzne",
+		"Procesory",
 		"Laptopy",
 		"Komputery",
 		"Telefony",

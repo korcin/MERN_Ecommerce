@@ -647,6 +647,10 @@ ul.CTAs a {
 		min-height: 0;
 	}
 
+	.navbar-brand h3 {
+		text-align: center;
+	}
+
 	.table-wrap {
 		word-wrap: break-word;
 		min-width: 160px;
@@ -662,6 +666,12 @@ ul.CTAs a {
 
 	.checkout {
 		width: auto;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.navbar-brand h3 {
+		font-size: 20px;
 	}
 }
 

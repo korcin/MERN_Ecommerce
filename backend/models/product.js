@@ -38,7 +38,8 @@ const productSchema = new mongoose.Schema({
 		required: [true, "Proszę wybrać kategorię dla produktu."],
 		enum: {
 			values: [
-				"Podzespoły komputerowe",
+				"Karty graficzne",
+				"Procesory",
 				"Laptopy",
 				"Komputery",
 				"Telefony",

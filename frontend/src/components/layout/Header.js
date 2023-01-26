@@ -85,8 +85,8 @@ const Header = () => {
 					)}
 
 					<Link to='/cart' style={{ textDecoration: "none" }}>
-						<span id='cart' className='ml-3'>
-							Koszyk
+						<span id='cart' className='me-2'>
+							<i class='fa-solid fa-cart-shopping'></i>
 						</span>
 						<span className='ml-1' id='cart_count'>
 							{cartItems.length}

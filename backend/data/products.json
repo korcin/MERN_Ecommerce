@@ -1,60 +1,221 @@
 [
 	{
-		"name": "SanDisk Ultra 128GB SDXC UHS-I Memory Card up to 80MB/s",
-		"price": "45.89",
-		"description": "Ultra-fast cards (2) to take better pictures and Full HD videos (1) with your compact to mid-range point-and-shoot cameras and camcorders. With SanDisk Ultra SDXC UHS-I cards you’ll benefit from faster downloads, high capacity, and better performance to capture and store 128GB (5) of high quality pictures and Full HD video (1). Take advantage of ultra-fast read speeds of up to 80MB/s (3) to save time moving photos and videos from the card to your computer. From a leader in flash memory storage, SanDisk Ultra SDXC UHS-I cards are compatible with SDHC and SDXC digital devices, and come with a 10-year limited warranty (6).",
-		"ratings": 4.5,
+		"name": "Karta graficzna Gigabyte GeForce RTX 3060 EAGLE OC LHR 12GB GDDR6",
+		"price": "1899",
+		"description": "Minimalistyczna i wyjątkowo wydajna karta graficzna Gigabyte GeForce RTX 3060 EAGLE OC LHR pozwoli Ci wzlecieć na wyżyny swoich możliwości. Dzięki wykorzystaniu architektury NVIDIA Ampere umożliwia płynny gaming przy wysokiej liczbie detali oraz FPS, a także wspiera nowatorskie technologie takich jak Ray Tracing czy DLSS. Wydajne chłodzenie WINDFORCE 2X zadba o optymalne temperatury pracy, a podświetlenie RGB Fusion 2.0 pozwoli nadać karcie bardziej osobistego charakteru. Karty graficzne LHR (Lite Hash Rate) sprzętowo ograniczają wydajność kopania kryptowaluty Ethereum.",
+		"ratings": 0.0,
 		"images": [
 			{
-				"public_id": "products/sandisk_som9tr",
-				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701313/products/sandisk_som9tr.jpg"
+				"public_id": "products/karta1_j1fm81",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674509604/products/karta1_j1fm81.png"
 			}
 		],
-		"category": "Podzespoły komputerowe",
-		"seller": "Ebay",
+		"category": "Karty graficzne",
+		"seller": "Gigabyte",
 		"stock": 50,
-		"numOfReviews": 32,
+		"numOfReviews": 0,
 		"reviews": []
 	},
 	{
-		"name": "CAN USB FD Adapter (GC-CAN-USB-FD)",
-		"price": "315.00",
-		"description": "Monitor a CAN network, write a CAN program and communicate with industrial, medical, automotive or other CAN based device. Connect CAN FD and CAN networks to a computer via USB with the CAN USB FD adapter.",
-		"ratings": 1.65,
+		"name": "Karta graficzna Gainward GeForce RTX 4070 Ti Phantom Reunion 12GB GDDR6X",
+		"price": "4399",
+		"description": "Wyprzedzająca swój czas architektura NVIDIA Ada Lovelace wyzwala pełną potęgę ray tracingu, który symuluje zachowanie światła w prawdziwym świecie. Dzięki mocy obliczeniowej układów GeForce RTX z serii 40 oraz trzeciej generacji rdzeni RT możesz cieszyć się niezwykłą szczegółowością wirtualnych światów jak nigdy wcześniej. Technika DLSS 3, napędzana nowymi rdzeniami Tensor czwartej generacji i akceleratorem przepływu optycznego w układach graficznych GeForce RTX z serii 40, wykorzystuje sztuczną inteligencję do tworzenia dodatkowych klatek o wysokiej jakości, znacząco zwiększając wydajność.",
+		"ratings": 0.0,
 		"images": [
 			{
-				"public_id": "products/pcan-usb-fd_dgghf3",
-				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701323/products/pcan-usb-fd_dgghf3.jpg"
+				"public_id": "products/karta2_abu7pn",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674509603/products/karta2_abu7pn.png"
+			}
+		],
+		"category": "Karty graficzne",
+		"seller": "Gainward",
+		"stock": 5,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Karta graficzna XFX Radeon RX 6700 SPEEDSTER SWFT309 10GB GDDR6",
+		"price": "1959",
+		"description": "Poznaj możliwości architektury AMD RDNA 2 i graj w rozdzielczości 1440p z kartą graficzną XFX Radeon RX 6700 SPEEDSTER SWFT309 10GB GDDR6. Ta stylowa konstrukcja oferuje wysoką wydajność oraz wsparcie dla wielu technologii, takich jak sprzętowy Ray Tracing czy FidelityFX. Wydajne chłodzenie z trzema wentylatorami zadba o optymalne temperatury pracy, a unikalny design w czarnej kolorystyce z powodzeniem odnajdzie się w każdej konfiguracji.",
+		"ratings": 0.0,
+		"images": [
+			{
+				"public_id": "products/karta3_zand9t",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674509819/products/karta3_zand9t.png"
+			}
+		],
+		"category": "Karty graficzne",
+		"seller": "XFX",
+		"stock": 5,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Karta graficzna ASRock Radeon RX 7900 XT 20GB GDDR6",
+		"price": "5249",
+		"description": "Graj na najwyższym poziomie dzięki rewolucyjnej architekturze AMD RDNA 3. Dzięki niej karta graficzna ASRock Radeon RX 7900 XT 20 GB GDDR6 zapewni Ci najlepsze osiągi do rozrywki, jak również i do profesjonalnej pracy. Dzięki 84 jednostkom RDNA 3 Compute Units z akceleratorami RT+AI, 20 GB pamięci GDDR6 na 320-bitowej szynie oraz pamięci Infinity Cache możesz cieszyć się najlepszą wydajnością. Stabilną pracę gwarantuje chłodzenie wykorzystujące trzy wentylatory.",
+		"ratings": 0.0,
+		"images": [
+			{
+				"public_id": "products/karta4_qlzkcr",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674509820/products/karta4_qlzkcr.png"
+			}
+		],
+		"category": "Karty graficzne",
+		"seller": "ASRock",
+		"stock": 0,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Intel Core i5-12400F",
+		"price": "819",
+		"description": "Korzystaj z procesorów Intel stworzonych dla gamingu nowej generacji, takich jak wyposażony w 6 rdzeni i 12 wątków Intel Core i5-12400F. Zapewnia on rewolucyjną wydajność dzięki wysokiemu taktowaniu do nawet 4,4 GHz. Pewnie zwyciężaj w kolejnych rozgrywkach i doświadcz imersji w nowe wirtualne światy. Wszystko to dzięki rewolucyjnej architekturze procesora skupiającej się na tym co, najważniejsze – gamingu.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/proc1_wmklba",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674510162/products/proc1_wmklba.png"
+			}
+		],
+		"category": "Procesory",
+		"seller": "Intel",
+		"stock": 10,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Intel Core i9-13900KS",
+		"price": "3699",
+		"description": "Ciesz się najwyższym komfortem grania w każdej postaci, teraz i w przyszłości, dzięki innowacyjnej architekturze procesora Intel Core i9-13900KS. Zapewnia on nawet 6 GHz maksymalnego taktowania i 24 rdzenie: 8 Performance-cores oraz 16 Efficient-cores. Przy tym oferuje 32 wątki, zintegrowaną grafikę Intel UHD Graphics 770 oraz 36 MB pamięci Intel Smart Cache. Ten odblokowany procesor Intel Core i9 trzynastej generacji do komputerów stacjonarnych jest też przygotowany do możliwości podkręcania. Bądź bliżej akcji niż kiedykolwiek wcześniej.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/proc2_yga9ll",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674510163/products/proc2_yga9ll.png"
+			}
+		],
+		"category": "Procesory",
+		"seller": "Intel",
+		"stock": 10,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "AMD Ryzen 5 5600X",
+		"price": "849.00",
+		"description": "Jednostka AMD Ryzen 5 5600X posiada 6 rdzeni i 12 wątków, gotowych do pracy przy maksymalnym obciążeniu w grach i specjalistycznych aplikacjach. Pamięć cache tego procesora liczy łącznie 35 MB, a bazowe taktowanie rdzeni otwiera częstotliwość 3,70 GHz, mogąca sięgać aż do 4,60 GHz w trybie Turbo. Moc jednostki może jednak wzrosnąć dzięki odblokowanej możliwości podkręcania. Czas na ogromną moc wspartą przez nowatorską architekturę Zen 3.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/ryzen_fjegwd",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672600319/products/ryzen_fjegwd.webp"
+			}
+		],
+		"category": "Procesory",
+		"seller": "AMD",
+		"stock": 10,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "AMD Ryzen 9 5900X",
+		"price": "1699",
+		"description": "Jednostka AMD Ryzen 9 5900X posiada 12 rdzeni i 24 wątki, gotowych do pracy przy maksymalnym obciążeniu w grach i specjalistycznych aplikacjach. Pamięć cache tego procesora liczy łącznie 70 MB, a bazowe taktowanie rdzeni otwiera częstotliwość 3,70 GHz, mogąca sięgać aż do 4,80 GHz w trybie Turbo. Moc jednostki może jednak wzrosnąć dzięki odblokowanej możliwości podkręcania. Czas na ogromną moc wspartą przez nowatorską architekturę Zen 3.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/proc4_kgvpn7",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674510265/products/proc4_kgvpn7.png"
+			}
+		],
+		"category": "Procesory",
+		"seller": "AMD",
+		"stock": 10,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Laptop HP Victus 15 i5-12450H/16GB/512 RTX3050 144Hz",
+		"price": "3699",
+		"description": "Laptop HP Victus został stworzony do rozgrywek na najwyższym poziomie. Ta elegancka maszyna może pochwalić się procesorem Intel® Core™ 12. generacji oraz nowoczesną kartą graficzną NVIDIA GeForce RTX. Konstrukcja tego laptopa robi równie duże wrażenie, co jego wydajne podzespoły, oferując ulepszony układ chłodzenia, pełną klawiaturę gamingową oraz kamerę HD z redukcją szumów.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/lap1_ibzohp",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674510576/products/lap1_ibzohp.png"
+			},
+			{
+				"public_id": "products/lap1_1_qhmyzp",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674510576/products/lap1_1_qhmyzp.png"
 			}
 		],
 		"category": "Laptopy",
-		"seller": "Amazon",
-		"stock": 10,
-		"numOfReviews": 2,
+		"seller": "HP",
+		"stock": 14,
+		"numOfReviews": 0,
 		"reviews": []
 	},
 	{
-		"name": "CHARMOUNT Full Motion TV Wall Mount Swivel",
-		"price": "26.99 ",
-		"description": "CHARMOUNT TV MOUNT UNIVERSAL DESIGN - Has your TV been received? Tilted TV wall mount is for 26 - 55 TVs weight up to 88lbs 40 kg. Our tilt TV mount has a compatible faceplate that fits VESA 75X75mm (3x3). CHARMOUNT TV MOUNT UNIVERSAL DESIGN - Has your TV been received? Tilted TV wall mount is for 26 - 55 TVs weight up to 88lbs 40 kg. Our tilt TV mount has a compatible faceplate that fits VESA 75X75mm (3x3) CHARMOUNT TV MOUNT UNIVERSAL DESIGN - Has your TV been received? Tilted TV wall mount is for 26 - 55 TVs weight up to 88lbs 40 kg. Our tilt TV mount has a compatible faceplate that fits VESA 75X75mm (3x3).",
-		"ratings": 3.5,
+		"name": "Laptop Acer Nitro 5 i5-12500H/16GB/512 RTX3060 144Hz",
+		"price": "5899",
+		"description": "Acer Nitro 5 powstał w jednym celu – aby wprowadzić Cię na najwyższe szczeble gamingowej drabiny. Tam, gdzie technologia Ray Tracingu czyni wirtualne światy jeszcze bardziej realistycznymi, a fps-y utrzymują się na poziomie zapewniającym komfortową rozgrywkę. Wewnątrz laptopa na Twoje e-sportowe sukcesy pracują m.in.: ultrawydajny procesor oraz karta graficzna GeForce RTX. Efekty ich pracy ujrzysz w rozdzielczości Full HD na wysokiej jakości ekranie. Podejmij wyzwanie i dołącz do wirtualnych pojedynków z laptopem Acer Nitro 5.",
+		"ratings": 0,
 		"images": [
 			{
-				"public_id": "products/51-2JPUG4sL._AC_SX355__edrftk",
-				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670701324/products/51-2JPUG4sL._AC_SX355__edrftk.jpg"
+				"public_id": "products/lap2_uskqlr",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674510576/products/lap2_uskqlr.png"
+			},
+			{
+				"public_id": "products/lap2_1_lwfnf6",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674510576/products/lap2_1_lwfnf6.png"
+			}
+		],
+		"category": "Laptopy",
+		"seller": "Acer",
+		"stock": 4,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Apple MacBook Air M1/16GB/256/Mac OS Gold",
+		"price": "6099",
+		"description": "MacBook Air z M1 łączy megawydajność z niewiarygodnie atrakcyjną ceną. Jest niesamowicie poręczny, szybki, i sprawny, ma bezszelestną konstrukcję pozbawiona wentylatora oraz piękny wyświetlacz Retina. Smukłego, lekkiego jak pióro MacBooka Air z baterią na cały dzień nie spowolnią nawet najcięższe zadania.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/apple1_jokttd",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674512901/products/apple1_jokttd.png"
+			}
+		],
+		"category": "Laptopy",
+		"seller": "Apple",
+		"stock": 10,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Komputer Lenovo Legion T5 i5-11400F/32GB/512/Win11 RTX3060Ti",
+		"price": "5399",
+		"description": "Dołącz do elity wybierając komputer gamingowy Lenovo Legion T5. Precyzyjnie dobrane podzespoły zaopatrzą Cię w moc niezbędną do działania i odnoszenia sukcesów w rozgrywkach e-sportowych. Bądź lepszy od swoich przeciwników i pnij się na szczyt tabel rankingowych w swojej ulubionej grze. Przenieś się do wirtualnego świata i bądź najlepszy razem z Lenovo Legion T5. Wyjątkowego gamingowego charakteru doda stylowe podświetlenie RGB wentylatorów. Dodatkowo podświetlone logo rozjaśni ciemną obudowę i zmieni Twoje stanowisko gry w jeszcze bardziej profesjonalne. Z takim sprzętem poczujesz się, jak prawdziwy gracz.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/komp1_p230kg",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674510894/products/komp1_p230kg.png"
 			}
 		],
 		"category": "Komputery",
-		"seller": "Amazon",
-		"stock": 1,
-		"numOfReviews": 12,
+		"seller": "Lenovo",
+		"stock": 10,
+		"numOfReviews": 0,
 		"reviews": []
 	},
 	{
-		"name": "XIAOMI Redmi Note 10 Pro",
+		"name": "Telefon XIAOMI Redmi Note 10 Pro",
 		"price": "1099",
 		"description": "Poznaj smartfon Redmi Note 10 Pro i jego wydajne podzespoły, oglądaj filmy na wysokiej jakości ekranie AMOLED i rób zdjęcia jednym z pięciu dostępnych aparatów. W międzyczasie przekonasz się też o długim czasie działania baterii, która z kolei czas ładowania ma wyjątkowo krótki. Do tego kilka przydatnych dodatków jak czytnik linii papilarnych, gniazdo słuchawkowe 3,5 mm, NFC czy nadajnik IR.",
-		"ratings": 3.5,
+		"ratings": 0,
 		"images": [
 			{
 				"public_id": "products/xiaomi10_fozznk",
@@ -72,103 +233,14 @@
 		"category": "Telefony",
 		"seller": "Xiaomi",
 		"stock": 1,
-		"numOfReviews": 12,
+		"numOfReviews": 0,
 		"reviews": []
 	},
 	{
-		"name": "Apple AirPods with Charging Case (Wired)",
-		"price": "126.99 ",
-		"description": "AirPods with Charging Case: More than 24 hours listening time, up to 18 hours talk time; AirPods (single charge): Up to 5 hours listening time, up to 3 hours talk time or 15 minutes in the case equals up to 3 hours listening time or up to 2 hours talk time.",
-		"ratings": 4.8,
-		"images": [
-			{
-				"public_id": "products/airpods_ytvjmt",
-				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670790991/products/airpods_ytvjmt.jpg"
-			}
-		],
-		"category": "Akcesoria",
-		"seller": "Amazon",
-		"stock": 122,
-		"numOfReviews": 2671,
-		"reviews": []
-	},
-	{
-		"name": "Apple MacBook Air (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray ",
-		"price": "949.99",
-		"description": "Stunning 13.3-inch Retina display with True Tone technology, Backlit Magic Keyboard and Touch ID, Tenth-generation, Intel Core i3 processor, Intel Iris Plus Graphics, Fast SSD storage, 8GB of memory, Stereo speakers with wider stereo sound",
-		"ratings": 4.9,
-		"images": [
-			{
-				"public_id": "products/macbook_oe4wdc",
-				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1670790853/products/macbook_oe4wdc.jpg"
-			}
-		],
-		"category": "Laptopy",
-		"seller": "Amazon",
-		"stock": 10,
-		"numOfReviews": 56,
-		"reviews": []
-	},
-	{
-		"name": "Cable Boom Microphone - Volume Control for Playstation PS4 or Xbox",
-		"price": "27.99",
-		"description": "DESIGN INFO - 3.5mm male to 2.5mm male audio cable adapter with Upgraded Flexible, Detachable Boom Mic which also enables rotary Volume Control and Mute Switch. SteelFlex Arm for perfect microphone positioning. INPUT COMPATIBILITY - Devices supporting 3.5mm audio output such as gaming PS4 / Xbox One controller, PC, Laptop, iPhone and Android Phone.",
-		"ratings": 4.1,
-		"images": [
-			{
-				"public_id": "products/eahhtj1bkn1k9gjgd3hn",
-				"url": "https://res.cloudinary.com/bookit/image/upload/v1606233125/products/eahhtj1bkn1k9gjgd3hn.jpg"
-			}
-		],
-		"category": "Akcesoria",
-		"seller": "Amazon",
-		"stock": 1123,
-		"numOfReviews": 6,
-		"reviews": []
-	},
-	{
-		"name": "Nikon D3500 korpus + obiektyw",
-		"price": "4249.99",
-		"description": "Radość z prawdziwej fotografii w chwilach wyjątkowych i na co dzień. Kompaktowa lustrzanka D3500 łączy wysoką jakość wykonania z doskonałymi parametrami. Bezproblemowa obsługa spektakularnie ułatwia rejestrowanie na zdjęciach ważnych chwil i dzielenie się nimi. Zastosowana w lustrzance D3500 matryca formatu DX o dużej rozdzielczości 24,2 mln pikseli rejestruje pełne szczegółów zdjęcia i filmy Full HD, nawet przy słabym oświetleniu. Dodanie do tego charakterystyk optycznych obiektywu NIKKOR daje zestaw, który pozwala tworzyć artystyczne portrety z rozmytym tłem. Z łatwością. Uchwyć wszystko. Od magii północy po kolory nowego dnia.  Zakres czułości ISO 100–25600 sprawia, że zdjęcia i filmy błyszczą w każdym świetle.",
-		"ratings": 4.7,
-		"images": [
-			{
-				"public_id": "products/nikon_yplcuh",
-				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672917907/products/nikon_yplcuh.jpg"
-			},
-			{
-				"public_id": "products/nikon1_s0oazi",
-				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672917907/products/nikon1_s0oazi.jpg"
-			}
-		],
-		"category": "Aparaty",
-		"seller": "Amazon",
-		"stock": 131,
-		"numOfReviews": 222,
-		"reviews": []
-	},
-	{
-		"name": "AMD Ryzen 5 5600X",
-		"price": "849.00",
-		"description": "Jednostka AMD Ryzen 5 5600X posiada 6 rdzeni i 12 wątków, gotowych do pracy przy maksymalnym obciążeniu w grach i specjalistycznych aplikacjach. Pamięć cache tego procesora liczy łącznie 35 MB, a bazowe taktowanie rdzeni otwiera częstotliwość 3,70 GHz, mogąca sięgać aż do 4,60 GHz w trybie Turbo. Moc jednostki może jednak wzrosnąć dzięki odblokowanej możliwości podkręcania. Czas na ogromną moc wspartą przez nowatorską architekturę Zen 3.",
-		"ratings": 4.75,
-		"images": [
-			{
-				"public_id": "products/ryzen_fjegwd",
-				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672600319/products/ryzen_fjegwd.webp"
-			}
-		],
-		"category": "Podzespoły komputerowe",
-		"seller": "AMD",
-		"stock": 10,
-		"numOfReviews": 222,
-		"reviews": []
-	},
-	{
-		"name": "Xiaomi 11T 8/128GB Celestial Blue",
+		"name": "Telefon Xiaomi 11T 8/128GB Celestial Blue",
 		"price": "1699.99",
 		"description": "Xiaomi 11T 128 GB Celestial Blue to świetny smartfon, który ma dla Ciebie wszystko, co najlepsze. Elegancki i profesjonalny design, duży przestronny ekran AMOLED ze 120 Hz odświeżaniem, szybki procesor i świetne aparaty. Jego starannie dobrane podzespoły dadzą Ci maksimum możliwości. Teraz zrealizujesz wszystkie swoje pasje, tak jak lubisz. A dzięki baterii o dużej pojemności możesz to robić przez cały dzień.",
-		"ratings": 4.75,
+		"ratings": 0,
 		"images": [
 			{
 				"public_id": "products/pr_2021_10_5_8_13_53_192_06_wgpxuo",
@@ -182,7 +254,247 @@
 		"category": "Telefony",
 		"seller": "Xiaomi",
 		"stock": 10,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Telefon Apple iPhone 13 256GB Midnight",
+		"price": "4939",
+		"description": "Xiaomi 11T 128 GB Celestial Blue to świetny smartfon, który ma dla Ciebie wszystko, co najlepsze. Elegancki i profesjonalny design, duży przestronny ekran AMOLED ze 120 Hz odświeżaniem, szybki procesor i świetne aparaty. Jego starannie dobrane podzespoły dadzą Ci maksimum możliwości. Teraz zrealizujesz wszystkie swoje pasje, tak jak lubisz. A dzięki baterii o dużej pojemności możesz to robić przez cały dzień.",
+		"ratings": 4.75,
+		"images": [
+			{
+				"public_id": "products/apple1_n1slo8",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511067/products/apple1_n1slo8.png"
+			},
+			{
+				"public_id": "products/apple11_woq1zy",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511067/products/apple11_woq1zy.png"
+			},
+			{
+				"public_id": "products/apple12_ly3dwa",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511067/products/apple12_ly3dwa.png"
+			}
+		],
+		"category": "Telefony",
+		"seller": "Apple",
+		"stock": 10,
 		"numOfReviews": 23,
+		"reviews": []
+	},
+	{
+		"name": "Aparat Nikon D3500 korpus + obiektyw",
+		"price": "4249.99",
+		"description": "Radość z prawdziwej fotografii w chwilach wyjątkowych i na co dzień. Kompaktowa lustrzanka D3500 łączy wysoką jakość wykonania z doskonałymi parametrami. Bezproblemowa obsługa spektakularnie ułatwia rejestrowanie na zdjęciach ważnych chwil i dzielenie się nimi. Zastosowana w lustrzance D3500 matryca formatu DX o dużej rozdzielczości 24,2 mln pikseli rejestruje pełne szczegółów zdjęcia i filmy Full HD, nawet przy słabym oświetleniu. Dodanie do tego charakterystyk optycznych obiektywu NIKKOR daje zestaw, który pozwala tworzyć artystyczne portrety z rozmytym tłem. Z łatwością. Uchwyć wszystko. Od magii północy po kolory nowego dnia.  Zakres czułości ISO 100–25600 sprawia, że zdjęcia i filmy błyszczą w każdym świetle.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/nikon_yplcuh",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672917907/products/nikon_yplcuh.jpg"
+			},
+			{
+				"public_id": "products/nikon1_s0oazi",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1672917907/products/nikon1_s0oazi.jpg"
+			}
+		],
+		"category": "Aparaty",
+		"seller": "Nikon",
+		"stock": 131,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Aparat Canon PowerShot G7X Mark II",
+		"price": "2999",
+		"description": "Radość z prawdziwej fotografii w chwilach wyjątkowych i na co dzień. Kompaktowa lustrzanka D3500 łączy wysoką jakość wykonania z doskonałymi parametrami. Bezproblemowa obsługa spektakularnie ułatwia rejestrowanie na zdjęciach ważnych chwil i dzielenie się nimi. Zastosowana w lustrzance D3500 matryca formatu DX o dużej rozdzielczości 24,2 mln pikseli rejestruje pełne szczegółów zdjęcia i filmy Full HD, nawet przy słabym oświetleniu. Dodanie do tego charakterystyk optycznych obiektywu NIKKOR daje zestaw, który pozwala tworzyć artystyczne portrety z rozmytym tłem. Z łatwością. Uchwyć wszystko. Od magii północy po kolory nowego dnia.  Zakres czułości ISO 100–25600 sprawia, że zdjęcia i filmy błyszczą w każdym świetle.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/aparat1_oxhkuf",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511434/products/aparat1_oxhkuf.png"
+			},
+			{
+				"public_id": "products/aparat11_hqigry",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511433/products/aparat11_hqigry.png"
+			}
+		],
+		"category": "Aparaty",
+		"seller": "Canon",
+		"stock": 11,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Konsola Microsoft Xbox Series S",
+		"price": "1399",
+		"description": "Oto Microsoft Xbox Series S - konsola nowej generacji, która, pomimo że jest o 60% mniejsza od swojego większego brata Xbox Series X, posiada komponenty, które gwarantują gaming na najwyższym poziomie. Brak napędu sprawia, że konsola jest w pełni cyfrowa, a dysk SSD NVMe o pojemności 512 GB i architekturze Xbox Velocity nie tylko pomieści Twoje ulubione gry, ale również błyskawicznie je wczyta. Zastosowany w konsoli Xbox Series S mocny układ graficzny pozwoli na grę w jakości 1440p przy nawet 120 klatkach na sekundę. Ponadto, urządzenie obsługuje technologię ray tracingu sprawiając w ten sposób, że gry będą wyróżniać się niesamowitym realizmem. Konsola odtwarza także materiały multimedialne w rozdzielczości 4K.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/xbox1_kghilk",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511637/products/xbox1_kghilk.png"
+			},
+			{
+				"public_id": "products/xbox12_bgdtfr",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511637/products/xbox12_bgdtfr.png"
+			},
+			{
+				"public_id": "products/xbox13_uzetv3",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511637/products/xbox13_uzetv3.png"
+			}
+		],
+		"category": "Konsole",
+		"seller": "Microsoft",
+		"stock": 131,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Konsola Microsoft Xbox Series X",
+		"price": "2499",
+		"description": "Przyszłość gier właśnie nadeszła. Na imię jej Xbox Series X. W tej konsoli, w ramach architektury XboX Velocity, dokonała się głęboka integracja zaplecza sprzętowego z oprogramowaniem. Owocem tej fuzji jest niespotykana dotąd dynamika gier oraz realizm inspirujący do nieustannego eksplorowania wirtualnych światów. Xbox Series X spełnia marzenie o ray tracingu na konsoli, ogromnej wydajności, większej przestrzeni na gry.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/series1_u02jvo",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511788/products/series1_u02jvo.png"
+			},
+			{
+				"public_id": "products/series12_ywso8v",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511788/products/series12_ywso8v.png"
+			}
+		],
+		"category": "Konsole",
+		"seller": "Microsoft",
+		"stock": 131,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Konsola Nintendo Switch Joy-Con - Czerwony / Niebieski",
+		"price": "1399",
+		"description": "Nintendo znów jest na fali. Od teraz nie musisz rezygnować z gry tylko dlatego, że wychodzisz z domu. Przełomowa konsola Nintendo Switch pozwoli Ci kontynuować rozgrywkę w podróży, w poczekalni, na przystanku, w ogrodzie, w przerwie między zajęciami, na lunchu i w każdym innym miejscu. Do gry dostępnych jest wiele niesamowitych gier. Wśród nich Skylanders Imaginators, Legend of Zelda: Breath of the Wild czy Super Mario Maker 2. Graj w pojedynkę, w duecie, a nawet 4na4. Walcz na ekranie konsoli lub transmituj rozgrywkę do telewizora. Włącz i graj. Swobodnie. Ten model konsoli Nintendo Switch posiada bardziej wydajny procesor, który dodatkowo w mniejszym stopniu obciąża baterię, co przekłada się na dłuższy czas pracy bez podłączenia do stacji dokującej i konieczności ponownego ładowania.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/nin1_o5ngn5",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511886/products/nin1_o5ngn5.png"
+			},
+			{
+				"public_id": "products/nin12_qtsnxt",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511886/products/nin12_qtsnxt.png"
+			}
+		],
+		"category": "Konsole",
+		"seller": "Nintendo",
+		"stock": 131,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Konsola Sony PlayStation 5 + Marvel's Spider-Man + The Last Of Us Part I",
+		"price": "3499",
+		"description": "Kup ten zestaw specjalny, który zawiera wszystko, czego potrzebujesz do rozpoczęcia swojej przygody z nową generacją konsoli PlayStation. Mocna konsola PlayStation 5 oraz prezentujące możliwości PS5 gry Marvel's Spider-Man: Miles Morales i The Last of Us Part I pozwolą Ci wejść na długie godziny do wirtualnego świata.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/sony1_bh67nl",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511992/products/sony1_bh67nl.png"
+			},
+			{
+				"public_id": "products/sony2_gtyabn",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511991/products/sony2_gtyabn.png"
+			}
+		],
+		"category": "Konsole",
+		"seller": "Sony",
+		"stock": 1,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Apple AirPods Pro (2. generacji)",
+		"price": "1299",
+		"description": "Zupełnie nowe AirPods Pro 2. generacji zapewniają nawet dwukrotnie lepszą aktywną redukcję hałasu, a do tego Adaptacyjny tryb kontaktu i Spersonalizowany dźwięk przestrzenny z dynamicznym śledzeniem ruchu głowy, dzięki czemu otaczają Cię wszechogarniającym brzmieniem. Słuchawki AirPods Pro i etui ładujące są odporne na wodę i pot, a oferowane są razem z wkładkami dousznymi w kilku rozmiarach (XS, S, M, L).",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/sluchawki_gm0mrx",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674511257/products/sluchawki_gm0mrx.png"
+			}
+		],
+		"category": "Akcesoria",
+		"seller": "Apple",
+		"stock": 22,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Ładowarka Xiaomi Mi 65W GaN Charger",
+		"price": "149",
+		"description": "Ładowarka Xiaomi Mi 65W GaN Charger jest kompatybilna ze smartfonami i laptopami Apple, Xiaomi, Dell, Lenovo i innych urządzeń z portem USB Typu-C. Akcesorium zostało wykonane z wykorzystaniem technologii GaN, co czyni z tej ładowarki kompaktowe i wydajne akcesorium.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/%C5%82adowarka_fkqkz0",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674513197/products/%C5%82adowarka_fkqkz0.png"
+			}
+		],
+		"category": "Akcesoria",
+		"seller": "Xiaomi",
+		"stock": 22,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Apple Ładowarka Sieciowa USB-C 20W Fast Charge",
+		"price": "119",
+		"description": "Z ładowarką sieciową Apple USB-C o mocy 20 W w szybki i sprawny sposób naładujesz swoje urządzenia gdziekolwiek jesteś. Korzystaj z niej w domu i w biurze, a także zabierz ją ze sobą w podróż. Zasilacz pasuje do wszystkich urządzeń z portami USB-C.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/%C5%82adowarka1_dkwsk6",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674513331/products/%C5%82adowarka1_dkwsk6.png"
+			}
+		],
+		"category": "Akcesoria",
+		"seller": "Apple",
+		"stock": 22,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Kontroler pad Microsoft Xbox Series Controller - White",
+		"price": "269",
+		"description": "Wypróbuj unowocześniony kontroler bezprzewodowy Xbox — Robot White o żłobionych powierzchniach i udoskonalonym kształcie zapewniający wyższy komfort użytkowania podczas rozgrywki. Możesz w szybki sposób parować kontroler i przełączać się między urządzeniami, takimi jak konsole Xbox, komputery z systemem Windows 10 oraz urządzenia mobilne.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/pad_v9jqkf",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674513491/products/pad_v9jqkf.png"
+			}
+		],
+		"category": "Akcesoria",
+		"seller": "Microsoft",
+		"stock": 22,
+		"numOfReviews": 0,
+		"reviews": []
+	},
+	{
+		"name": "Kontroler pad Sony Playstation 5 DualSense Czarny",
+		"price": "319",
+		"description": "Poznaj kontroler DualSense w kolorze klasycznej nocnej czerni. Na wygląd tego modelu kontrolera składają się subtelnie różniące się od siebie odcienie czerni oraz delikatne, szare wykończenia. Znany z poprzednich generacji konsol firmy Sony kontroler przeszedł znaczną metamorfozę i trzeba przyznać, że wygląda świetnie. DualSense, bo o nim mowa, jest kontrolerem przeznaczonym do konsoli Sony PlayStation 5. Posiada zmieniony design, a połączenie kolorów białego i czarnego przełożyły się na niesamowity efekt wizualny.",
+		"ratings": 0,
+		"images": [
+			{
+				"public_id": "products/pad2_hrmxsd",
+				"url": "https://res.cloudinary.com/dn4sa6fc2/image/upload/v1674513576/products/pad2_hrmxsd.png"
+			}
+		],
+		"category": "Akcesoria",
+		"seller": "Sony",
+		"stock": 22,
+		"numOfReviews": 0,
 		"reviews": []
 	}
 ]

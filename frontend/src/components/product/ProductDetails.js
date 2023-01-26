@@ -282,6 +282,8 @@ const ProductDetails = () => {
 					{product.reviews && product.reviews.length > 0 && (
 						<Reviews reviews={product.reviews} />
 					)}
+					<h2>Kompatybilne produkty</h2>
+					<div style={{ height: "50vh" }}></div>
 				</Fragment>
 			)}
 		</Fragment>
