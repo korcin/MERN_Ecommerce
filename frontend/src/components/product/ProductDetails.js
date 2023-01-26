@@ -14,7 +14,16 @@ import { addItemToCart } from "../../actions/cartActions"
 import { NEW_REVIEW_RESET } from "../../constants/productConstants"
 import Reviews from "../review/Reviews"
 
-const ProductDetails = () => {
+import { useRecommendations } from "@algolia/recommend-react"
+import recommend from "@algolia/recommend"
+
+const recommendClient = recommend(
+	"BYAK94QT0C",
+	"45e7e17c64c905886ecaabb6088646a6"
+)
+const indexName = "eletronics"
+
+const ProductDetails = ({ currentObjectID }) => {
 	const [quantity, setQuantity] = useState(1)
 	const [rating, setRating] = useState(0)
 	const [comment, setComment] = useState("")
@@ -111,6 +120,13 @@ const ProductDetails = () => {
 
 		dispatch(newReview(formData))
 	}
+
+	const { recommendations } = useRecommendations({
+		model: "related-products",
+		recommendClient,
+		indexName,
+		objectIDs: [currentObjectID],
+	})
 
 	return (
 		<Fragment>
@@ -283,7 +299,21 @@ const ProductDetails = () => {
 						<Reviews reviews={product.reviews} />
 					)}
 					<h2>Kompatybilne produkty</h2>
-					<div style={{ height: "50vh" }}></div>
+					<div className='auc-Recommend'>
+						{recommendations.length > 0 && (
+							<ol className='auc-Recommend-list'>
+								{recommendations.map(recommendation => (
+									<li
+										key={recommendation.objectID}
+										className='auc-Recommend-item'>
+										<pre>
+											<code>{JSON.stringify(recommendation)}</code>
+										</pre>
+									</li>
+								))}
+							</ol>
+						)}
+					</div>
 				</Fragment>
 			)}
 		</Fragment>
